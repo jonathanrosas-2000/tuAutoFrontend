@@ -1,0 +1,53 @@
+.element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    .image {
+        background-color: #007892;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        .title {
+            font-size: 12px;
+            font-weight: 400;
+            color: #64748B;
+            text-transform: capitalize;
+        }
+        
+        .content {
+            text-transform: capitalize;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1E293B;
+        }
+    }
+}
+
+.simpleContainer {
+    .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        .text {
+            font-weight: 400;
+            font-size: 12px;
+            color: #64748B;
+        }
+    }
+}
+
+.text {
+    font-weight: 400;
+    color: #64748B;
+    font-size: 12px;
+}

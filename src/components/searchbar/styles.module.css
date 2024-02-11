@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    min-height: 20vh;
+    background-image: url('../../assets/PrincipalBar.png');
+    background-position: center;
+
+    .searchbar {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .input {
+            width: 70%;
+            min-width: 200px;
+            border: none;
+            font-size: 16px;
+            font-weight: 400;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-radius: 1rem 0 0 1rem;
+
+            @media screen and (min-width: 768px) { 
+                width: 50%;
+            }
+        }
+        .input:focus {
+            outline: 2px solid var(--blue-button);
+        }
+
+        .button {
+            height: 100%;
+            border: none;
+            background-color: var(--blue-button);
+            padding-right: 1rem;
+            padding-left: 1rem;
+            padding-top: 0.6rem;
+            padding-bottom: 0.6rem;
+            border-radius: 0 1rem 1rem 0;
+            cursor: pointer;
+        }
+    }
+}

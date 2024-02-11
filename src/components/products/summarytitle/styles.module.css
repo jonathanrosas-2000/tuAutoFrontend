@@ -1,0 +1,12 @@
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1E293B;
+    text-transform: capitalize;
+    margin: 1rem 0;
+
+    .bar {
+        width: 105px;
+        border: 2px solid #007892;
+    }
+}

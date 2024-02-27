@@ -27,11 +27,21 @@ const PriceCard = ({product}:any) => {
       });
     };
      useEffect(() => {
-        const tempMortage = price * (selectedPercentage / 100);
-        const tempMonthPayment = (price - tempMortage) / selectedMonths;
-        setMortage(tempMortage);
-        setMonthPayment(tempMonthPayment)
-     }, [selectedMonths, selectedPercentage])
+        const enganche = price * (selectedPercentage / 100);
+        console.log(`Enganche temporal ${enganche}`)
+        const restante = price - enganche;
+        console.log('restante:', restante)
+        const interesTotal = 1.8*selectedMonths
+        console.log('interesTotal:', interesTotal)
+        console.log(((interesTotal / 100) + 1))
+        const total = restante * ((interesTotal / 100) + 1)
+        console.log('total:', total)
+        const pagoMensual = total / selectedMonths;
+        console.log('pagoMensual:', pagoMensual)
+
+        setMortage(enganche);
+        setMonthPayment(pagoMensual)
+     }, [selectedMonths, selectedPercentage]);
 
   return (
     <div className={styles.card}>
@@ -58,10 +68,10 @@ const PriceCard = ({product}:any) => {
           />
           <h2 className={styles.text}>Enganche <span className={styles.span}>(%)</span></h2>
             <Slider
-              min={15} 
-              max={85} 
+              min={10} 
+              max={90} 
               step={10}
-              marks={{ 15: '15%', 25: '25%', 35: '35%', 45: '45%', 55: '55%', 65: '65%', 75: '75%', 85: '85%' }} 
+              marks={{ 10: '10%', 20: '20%', 30: '30%', 40: '40%', 50: '50%', 60: '60%', 70: '70%', 80: '80%', 90: '90%' }} 
               onChange={handlePercentageChange} 
               value={selectedPercentage} 
               className='filterClass'
@@ -81,7 +91,8 @@ const PriceCard = ({product}:any) => {
           <div className={styles.separator}></div>
           <div className={styles.texts}>
             <h4 className={styles.text}>Mensualidad</h4>
-            <p className={styles.price}>{`$ ${(monthPayment * 1.24).toFixed(1)}`} MXN</p>
+            <p className={styles.price}>{`$ ${(monthPayment).toFixed(1)}`} MXN</p>
+
           </div>
         </div>
     </div>

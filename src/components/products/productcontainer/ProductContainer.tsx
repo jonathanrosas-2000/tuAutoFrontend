@@ -17,7 +17,7 @@ const ProductContainer = ({product}: any) => {
       <div className={styles.car}>
         <div className={styles.imageContainer}>
           {image ? (
-            <Image src={`http://localhost:1337${image.data[0].attributes.url}`} alt={`Carro seminuevo ${name}`} width={500} height={400} className={styles.image}/>
+            <Image src={`${image.data[0].attributes.url}`} alt={`Carro seminuevo ${name}`} width={500} height={400} className={styles.image}/>
           ): (
             <h2>No image</h2>
           )}

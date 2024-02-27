@@ -6,7 +6,7 @@ const nextConfig = {
     DEFAULT_MONTHS: process.env.DEFAULT_MONTHS
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'res.cloudinary.com'],
   },
 };
 

@@ -2,7 +2,7 @@
 import React from 'react'
 import { Title } from '../index';
 import Image from 'next/image'
-import principalCar from '../../assets/carPrincipal.png';
+import principalCar from '../../assets/chevrolet.webp';
 import checkIcon from '../../assets/icons/check.svg'
 import styles from './styles.module.css'
 

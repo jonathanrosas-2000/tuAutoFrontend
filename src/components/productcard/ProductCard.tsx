@@ -9,7 +9,7 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
     const { name, year, mileage, actualLocation, price, mortage, image } = attributes;
 
     const getPriceWithoutMortage = (price: number) => {
-      return formatPrice(Math.round( (price - mortage) / Number(config.default_months)))
+      return formatPrice(Math.round( (price - mortage) * 1.8 / Number(config.default_months)))
     }
 
     const handleProductClick = () => {
@@ -20,7 +20,7 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
     <div className={styles.card} onClick={handleProductClick}>
         <div className={styles.image}>
           {image.data.length > 0 ? (
-            <Image src={`http://localhost:1337${image.data[0].attributes.url}`} alt='TuAutoSeminuevo logo' width={200} height={180} className={styles.image}/>
+            <Image src={`${image.data[0].attributes.url}`} alt='TuAutoSeminuevo logo' width={200} height={180} className={styles.image}/>
           ) : (
             <Image src={TuAutoSeminiuevoLogo} alt='TuAutoSeminuevo logo' width={200} height={180} />
           )}

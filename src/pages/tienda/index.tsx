@@ -39,7 +39,6 @@ const Tienda = () => {
 
   useEffect(() => {
     let aux = products;
-    console.log('Atnes de filtrar', aux.length)
     if(!!searchTerm){
       aux = aux.filter((item: ProductsProps) => item?.attributes?.name.toLocaleLowerCase().includes(searchTerm))
     }
@@ -47,7 +46,6 @@ const Tienda = () => {
       aux = aux.filter((item) => selectedYears.includes(item.attributes.year));
     }
     
-    console.log('Despues de filtrar', aux.length)
     setFilterProducts(aux);
   }, [products, searchTerm, selectedYears]);
 

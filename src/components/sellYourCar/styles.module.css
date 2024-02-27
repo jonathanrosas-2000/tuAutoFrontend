@@ -58,6 +58,7 @@
         flex-direction: row;
         .image {
             width: 40%;
+            border-radius: 15px;
         }
         .info {
             text-align: start;

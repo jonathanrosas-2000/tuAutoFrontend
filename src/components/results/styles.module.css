@@ -11,6 +11,8 @@
 
     .results {
         width: 90%;
+        margin: 0 auto;
+        padding-top: 1rem;
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 20px;

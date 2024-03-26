@@ -67,7 +67,12 @@ const Tienda = () => {
           <Results products={filterProducts} searchTerm={searchTerm} brands={brands} years={uniqueYears} selectedYears={selectedYears} setSelectedYears={setSelectedYears} />
         </>
       ) : (
-        <h2>No contamos con resultados para mostrar</h2>
+        <div className="maintenance-container">
+          <h1 className="maintenance-heading">En mantenimiento</h1>
+          <p className="maintenance-message">
+            Estamos realizando tareas de mantenimiento en nuestra página. Volveremos pronto.
+          </p>
+        </div>
       )}
     </PrincipalLayout>
   )

@@ -118,3 +118,25 @@
         }
     }
 }
+
+/* page under mantain */
+.maintenance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: #2196f3; /* Azul */
+    color: #fff; /* Blanco */
+    font-family: Arial, sans-serif;
+  }
+  
+  .maintenance-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .maintenance-message {
+    font-size: 20px;
+    text-align: center;
+  }

@@ -1,6 +1,6 @@
 import { useEffect, createContext, useState } from 'react';
 import PrincipalLayout from "@/layout/PrincipalLayout"
-import { SearchBar, Results } from '@/components';
+import { SearchBar, Results, Loader } from '@/components';
 import '@/styles/globals.css';
 import axios from 'axios';
 import config from '../../common/config';
@@ -12,6 +12,7 @@ const Tienda = () => {
   const [ products, setProducts ] = useState<any[]>([]);
   const [ filterProducts, setFilterProducts ] = useState<any []>([]);
   const [ selectedYears, setSelectedYears ] = useState<number[]>([]);
+  const [ loading, setLoading] = useState<boolean>(true);
 
   const getProducts = async () => {
     try {
@@ -19,6 +20,8 @@ const Tienda = () => {
       setProducts(res.data.data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -40,7 +43,7 @@ const Tienda = () => {
   useEffect(() => {
     let aux = products;
     if(!!searchTerm){
-      aux = aux.filter((item: ProductsProps) => item?.attributes?.name.toLocaleLowerCase().includes(searchTerm))
+      aux = aux.filter((item: ProductsProps) => item?.attributes?.nombre.toLocaleLowerCase().includes(searchTerm))
     }
     if (selectedYears.length > 0) {
       aux = aux.filter((item) => selectedYears.includes(item.attributes.year));
@@ -52,27 +55,33 @@ const Tienda = () => {
   const yearsSet = new Set();
 
   const uniqueYears = products.map((product: ProductsProps) => {
-      if (!yearsSet.has(product.attributes.year)) {
-          yearsSet.add(product.attributes.year);
-          return product.attributes.year;
+      if (!yearsSet.has(product.attributes.anio)) {
+          yearsSet.add(product.attributes.anio);
+          return product.attributes.anio;
       }
       return null; // O puedes retornar undefined si prefieres
   }).filter(year => year !== null);
 
   return (
     <PrincipalLayout>
-      {filterProducts.length > 0 ? (
-        <>
-          <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-          <Results products={filterProducts} searchTerm={searchTerm} brands={brands} years={uniqueYears} selectedYears={selectedYears} setSelectedYears={setSelectedYears} />
-        </>
+      {loading ? (
+        <Loader />
       ) : (
-        <div className="maintenance-container">
+        <>
+        {filterProducts.length > 0 ? (
+          <>
+            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+            <Results products={filterProducts} searchTerm={searchTerm} brands={brands} years={uniqueYears} selectedYears={selectedYears} setSelectedYears={setSelectedYears} />
+          </>
+        ) : (
+          <div className="maintenance-container">
           <h1 className="maintenance-heading">En mantenimiento</h1>
           <p className="maintenance-message">
             Estamos realizando tareas de mantenimiento en nuestra página. Volveremos pronto.
           </p>
         </div>
+        )}
+      </>
       )}
     </PrincipalLayout>
   )

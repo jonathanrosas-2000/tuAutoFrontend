@@ -6,10 +6,10 @@ import { formatPrice } from '../../helpers/priceFunction';
 import config from '../../common/config'
 
 const ProductCard = ( { id, attributes }: ProductsProps ) => {
-    const { name, year, mileage, actualLocation, price, mortage, image } = attributes;
+    const { nombre, anio, kilometraje, ubicacionActual, precio, enganche, image } = attributes;
 
     const getPriceWithoutMortage = (price: number) => {
-      return formatPrice(Math.round( (price - mortage) * 1.8 / Number(config.default_months)))
+      return formatPrice(Math.round( (price - enganche) * 1.8 / Number(config.default_months)))
     }
 
     const handleProductClick = () => {
@@ -26,17 +26,17 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
           )}
         </div>
         <div className={styles.data}>
-          <h3 className={styles.name}>{name}</h3>
+          <h3 className={styles.name}>{nombre}</h3>
           <div className={styles.info}>
-            <span className={styles.text}>{year}</span>
+            <span className={styles.text}>{anio}</span>
             <div className={styles.separator}></div>
-            <span className={styles.text}>{actualLocation}</span>
+            <span className={styles.text}>{ubicacionActual}</span>
             <div className={styles.separator}></div>
-            <span className={styles.text}>{mileage}</span>
+            <span className={styles.text}>{kilometraje}</span>
           </div>
           <hr className={styles.hr} />
-          <p className={styles.price}>Contado: {formatPrice(price)}</p>
-          <p className={styles.total}><span className={styles.span}>Desde</span> {getPriceWithoutMortage(price)} <span className={styles.span}>/mes*</span></p>
+          <p className={styles.price}>Contado: {formatPrice(precio)}</p>
+          <p className={styles.total}><span className={styles.span}>Desde</span> {getPriceWithoutMortage(precio)} <span className={styles.span}>/mes*</span></p>
         </div>
     </div>
   )

@@ -1,7 +1,8 @@
 .hero {
     width: 100%;
+    overflow: hidden;
     height: 80vh;
-    background-color: var(--purple-color);
+    background: linear-gradient(90deg, rgba(38,31,108,1) 0%, rgba(9,9,121,1) 63%, rgba(35,180,255,1) 100%);
     position: relative;
     z-index: 1;
 
@@ -59,7 +60,7 @@
         }
     }
 
-        .image {
+    .image {
             display: none;
             position: absolute;
             z-index: 5;
@@ -68,12 +69,12 @@
             bottom: 0;
             @media screen and (min-width: 768px) {
                 display: block;
-                width: 1100px;
-                margin-left: 15rem;
-                height: 90%;
+                width: 950px;
+                height: auto;
                 z-index: 10;
-            }
+                right: -100px;
         }
+    }
 
     .cover{
         position: absolute;

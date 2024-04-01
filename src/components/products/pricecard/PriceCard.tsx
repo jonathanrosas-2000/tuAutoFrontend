@@ -5,12 +5,12 @@ import 'rc-slider/assets/index.css';
 import styles from './styles.module.css'
 
 const PriceCard = ({product}:any) => {
-    const { name, actualLocation, year, mileage, price } = product.attributes;
+    const { nombre, ubicacionActual, anio, kilometraje, precio } = product.attributes;
     const [selectedMonths, setSelectedMonths] = useState(36);
     const [selectedPercentage, setSelectedPercentage] = useState(35);
-    const [totalPrice, setTotalPrice] = useState<number>(price);
-    const [mortage, setMortage] = useState<number>(price * (0.35));
-    const [monthPayment, setMonthPayment] = useState<number>((price * 0.65) / 36 );
+    const [totalPrice, setTotalPrice] = useState<number>(precio);
+    const [mortage, setMortage] = useState<number>(precio * (0.35));
+    const [monthPayment, setMonthPayment] = useState<number>((precio * 0.65) / 36 );
 
     const handleMonthChange = (value: any) => {
       setSelectedMonths(value);
@@ -27,17 +27,11 @@ const PriceCard = ({product}:any) => {
       });
     };
      useEffect(() => {
-        const enganche = price * (selectedPercentage / 100);
-        console.log(`Enganche temporal ${enganche}`)
-        const restante = price - enganche;
-        console.log('restante:', restante)
+        const enganche = precio * (selectedPercentage / 100);
+        const restante = precio - enganche;
         const interesTotal = 1.8*selectedMonths
-        console.log('interesTotal:', interesTotal)
-        console.log(((interesTotal / 100) + 1))
         const total = restante * ((interesTotal / 100) + 1)
-        console.log('total:', total)
         const pagoMensual = total / selectedMonths;
-        console.log('pagoMensual:', pagoMensual)
 
         setMortage(enganche);
         setMonthPayment(pagoMensual)
@@ -46,13 +40,13 @@ const PriceCard = ({product}:any) => {
   return (
     <div className={styles.card}>
         <div className={styles.header}>
-            <h2 className={styles.title}>{name}</h2>
+            <h2 className={styles.title}>{nombre}</h2>
             <ul className={styles.list}>
-                <li className={styles.element}>{year}</li>
+                <li className={styles.element}>{anio}</li>
                 <div className={styles.point}></div>
-                <li className={styles.element}>{actualLocation}</li>
+                <li className={styles.element}>{ubicacionActual}</li>
                 <div className={styles.point}></div>
-                <li className={styles.element}>{mileage} km</li>
+                <li className={styles.element}>{kilometraje} km</li>
             </ul>
         </div>
         <div className={styles.filters}>

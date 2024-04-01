@@ -9,7 +9,7 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
     const { nombre, anio, kilometraje, ubicacionActual, precio, enganche, image } = attributes;
 
     const getPriceWithoutMortage = (price: number) => {
-      return formatPrice(Math.round( (price - enganche) * 1.8 / Number(config.default_months)))
+      return formatPrice(Math.round((price - enganche) * 1.8 / Number(config.default_months)))
     }
 
     const handleProductClick = () => {

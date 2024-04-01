@@ -17,6 +17,7 @@ const ProductPage = () => {
           console.log('Product', res.data.data);
           setProduct(res.data.data);
         } catch (error) {
+          console.log(error)
           console.error(error);
         }
       }
@@ -31,7 +32,7 @@ const ProductPage = () => {
     <PrincipalLayout>
         {product.id && (
           <>
-            <ProductHeadBar name={product.attributes.name} id={product.id} />
+            <ProductHeadBar name={product.attributes.nombre} id={product.id} />
             <ProductContainer product={product}/>
           </>
         )}

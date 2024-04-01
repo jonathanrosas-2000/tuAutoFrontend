@@ -1,6 +1,6 @@
 import { useEffect, createContext, useState } from 'react';
 import PrincipalLayout from "@/layout/PrincipalLayout"
-import { SearchBar, Results, Loader } from '@/components';
+import { SearchBar, Results, Loader, UnderMantainer } from '@/components';
 import '@/styles/globals.css';
 import axios from 'axios';
 import config from '../../common/config';
@@ -74,12 +74,7 @@ const Tienda = () => {
             <Results products={filterProducts} searchTerm={searchTerm} brands={brands} years={uniqueYears} selectedYears={selectedYears} setSelectedYears={setSelectedYears} />
           </>
         ) : (
-          <div className="maintenance-container">
-          <h1 className="maintenance-heading">En mantenimiento</h1>
-          <p className="maintenance-message">
-            Estamos realizando tareas de mantenimiento en nuestra página. Volveremos pronto.
-          </p>
-        </div>
+          <UnderMantainer />
         )}
       </>
       )}

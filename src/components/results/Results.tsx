@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Filter, ProductCard } from '@/components'
 import styles from './styles.module.css'
-import {ProductsProps} from '@/types/proptypes'
+import {carType} from '@/types/typing';
 
 
 const Results = ({ products, years, brands, selectedYears, setSelectedYears }: any ) => {
@@ -18,8 +18,8 @@ const Results = ({ products, years, brands, selectedYears, setSelectedYears }: a
         </div>
       ) : (
         <div className={styles.results}>
-        { products.map((product: ProductsProps) => (
-          <ProductCard key={product.id} id={product.id} attributes={product.attributes} />
+        { products.map((product: carType) => (
+          <ProductCard key={product.id} id={product.id} attributes={product} />
         ))}
       </div>
       )}

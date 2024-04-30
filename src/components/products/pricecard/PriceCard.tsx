@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react'
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import styles from './styles.module.css'
+import { carType } from '@/types/typing';
 
-const PriceCard = ({product}:any) => {
-    const { name, actualLocation, year, mileage, price } = product.attributes;
+const PriceCard = ({product}: {product: carType}) => {
+  const { name, year, mileage, price } = product;
+    
     const [selectedMonths, setSelectedMonths] = useState(36);
     const [selectedPercentage, setSelectedPercentage] = useState(35);
     const [totalPrice, setTotalPrice] = useState<number>(price);
@@ -28,16 +30,10 @@ const PriceCard = ({product}:any) => {
     };
      useEffect(() => {
         const enganche = price * (selectedPercentage / 100);
-        console.log(`Enganche temporal ${enganche}`)
         const restante = price - enganche;
-        console.log('restante:', restante)
         const interesTotal = 1.8*selectedMonths
-        console.log('interesTotal:', interesTotal)
-        console.log(((interesTotal / 100) + 1))
         const total = restante * ((interesTotal / 100) + 1)
-        console.log('total:', total)
         const pagoMensual = total / selectedMonths;
-        console.log('pagoMensual:', pagoMensual)
 
         setMortage(enganche);
         setMonthPayment(pagoMensual)
@@ -50,7 +46,7 @@ const PriceCard = ({product}:any) => {
             <ul className={styles.list}>
                 <li className={styles.element}>{year}</li>
                 <div className={styles.point}></div>
-                <li className={styles.element}>{actualLocation}</li>
+                <li className={styles.element}>CDMX</li>
                 <div className={styles.point}></div>
                 <li className={styles.element}>{mileage} km</li>
             </ul>

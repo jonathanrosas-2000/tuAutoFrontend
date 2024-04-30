@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && npm start"
   },
   "dependencies": {
     "axios": "^1.6.7",
@@ -14,7 +15,8 @@
     "next": "14.1.0",
     "rc-slider": "^10.5.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.33.3"
   },
   "devDependencies": {
     "@types/node": "^20",

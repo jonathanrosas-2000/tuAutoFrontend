@@ -1,3 +1,5 @@
+import { carType } from './typing';
+
 export interface BenefitsProps {
     title: string; 
     content: string;
@@ -11,24 +13,25 @@ export interface StepProps {
 }
 
 export interface ProductAtributes {
-    actualLocation: string;
-    color: string;
-    doors: number;
-    fuelType: string;
-    idProduct: string;
-    mileage: number;
-    mortage: number;
-    name: string;
-    price: number;
-    transmission: string;
-    year: number;
     createdAt: string;
-    publishedAt: string;
     updatedAt: string;
+    publishedAt: string;
+    color: string;
+    nombre: string;
+    descripcion: string;
+    anio: number;
+    kilometraje: number;
+    precio: number;
+    enganche: number;
+    puertas: number;
+    tipo: string;
+    transmision: string;
+    ubicacionActual: string;
+    caracteristicas: null | string;
     image: any;
 }
 
 export interface ProductsProps {
-    id: number;
-    attributes: ProductAtributes;
+    id: string;
+    attributes: carType;
 }

@@ -6,10 +6,10 @@ import { formatPrice } from '../../helpers/priceFunction';
 import config from '../../common/config'
 
 const ProductCard = ( { id, attributes }: ProductsProps ) => {
-    const { name, year, mileage, actualLocation, price, mortage, image } = attributes;
+    const { name, year, brand, color, description, doors, images, mileage, price, mortage, type, transmission, extra} = attributes;
 
     const getPriceWithoutMortage = (price: number) => {
-      return formatPrice(Math.round( (price - mortage) * 1.8 / Number(config.default_months)))
+      return formatPrice(Math.round((price - mortage) * 1.8 / Number(config.default_months)))
     }
 
     const handleProductClick = () => {
@@ -19,8 +19,8 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
   return (
     <div className={styles.card} onClick={handleProductClick}>
         <div className={styles.image}>
-          {image.data.length > 0 ? (
-            <Image src={`${image.data[0].attributes.url}`} alt='TuAutoSeminuevo logo' width={200} height={180} className={styles.image}/>
+          {images.length > 0 ? (
+            <Image src={`${images[0]}`} alt='TuAutoSeminuevo logo' width={200} height={180} className={styles.image}/>
           ) : (
             <Image src={TuAutoSeminiuevoLogo} alt='TuAutoSeminuevo logo' width={200} height={180} />
           )}
@@ -30,7 +30,7 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
           <div className={styles.info}>
             <span className={styles.text}>{year}</span>
             <div className={styles.separator}></div>
-            <span className={styles.text}>{actualLocation}</span>
+            <span className={styles.text}>CDMX</span>
             <div className={styles.separator}></div>
             <span className={styles.text}>{mileage}</span>
           </div>

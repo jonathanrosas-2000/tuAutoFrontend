@@ -19,7 +19,7 @@ const Hero = () => {
             <button className={styles.discover} onClick={handleRedirection}>Descubre más <Image src={arrowIcon} alt='Right arrows icons' width={20} height={20}/></button>
         </div>
         <Image src={carImage} alt='Car image' className={styles.image} />
-        <div className={styles.cover}><Image src={background} alt='Background blue principal'/></div>
+        
     </div>
   )
 }

@@ -3,14 +3,16 @@ import { useEffect, useState } from 'react'
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import styles from './styles.module.css'
+import { carType } from '@/types/typing';
 
-const PriceCard = ({product}:any) => {
-    const { nombre, ubicacionActual, anio, kilometraje, precio } = product.attributes;
+const PriceCard = ({product}: {product: carType}) => {
+  const { name, year, mileage, price } = product;
+    
     const [selectedMonths, setSelectedMonths] = useState(36);
     const [selectedPercentage, setSelectedPercentage] = useState(35);
-    const [totalPrice, setTotalPrice] = useState<number>(precio);
-    const [mortage, setMortage] = useState<number>(precio * (0.35));
-    const [monthPayment, setMonthPayment] = useState<number>((precio * 0.65) / 36 );
+    const [totalPrice, setTotalPrice] = useState<number>(price);
+    const [mortage, setMortage] = useState<number>(price * (0.35));
+    const [monthPayment, setMonthPayment] = useState<number>((price * 0.65) / 36 );
 
     const handleMonthChange = (value: any) => {
       setSelectedMonths(value);
@@ -27,8 +29,8 @@ const PriceCard = ({product}:any) => {
       });
     };
      useEffect(() => {
-        const enganche = precio * (selectedPercentage / 100);
-        const restante = precio - enganche;
+        const enganche = price * (selectedPercentage / 100);
+        const restante = price - enganche;
         const interesTotal = 1.8*selectedMonths
         const total = restante * ((interesTotal / 100) + 1)
         const pagoMensual = total / selectedMonths;
@@ -40,13 +42,13 @@ const PriceCard = ({product}:any) => {
   return (
     <div className={styles.card}>
         <div className={styles.header}>
-            <h2 className={styles.title}>{nombre}</h2>
+            <h2 className={styles.title}>{name}</h2>
             <ul className={styles.list}>
-                <li className={styles.element}>{anio}</li>
+                <li className={styles.element}>{year}</li>
                 <div className={styles.point}></div>
-                <li className={styles.element}>{ubicacionActual}</li>
+                <li className={styles.element}>CDMX</li>
                 <div className={styles.point}></div>
-                <li className={styles.element}>{kilometraje} km</li>
+                <li className={styles.element}>{mileage} km</li>
             </ul>
         </div>
         <div className={styles.filters}>

@@ -2,7 +2,7 @@
 import { BreadCrumb } from '@/components';
 import styles from './styles.module.css'
 
-const SearchBar = ({ name, id}: { name:string; id: number;}) => {
+const SearchBar = ({ name, id}: { name:string; id: string;}) => {
     const Steps = [
       { title: 'Home', link: '/'},
       { title: 'Tienda', link: '/tienda'},

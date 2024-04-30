@@ -3,39 +3,54 @@ import { useEffect, useState } from 'react'
 import PrincipalLayout from "@/layout/PrincipalLayout"
 import { ProductHeadBar, ProductContainer } from '@/components';
 import '@/styles/globals.css';
-import axios from 'axios'
-import config from '../../common/config';
 import { useRouter } from 'next/router'
+import {products as productsFromDB } from '@/data/cars';
+import { carType } from '@/types/typing';
 
 const ProductPage = () => {
-    const [product, setProduct] = useState<any>({});
+    const [product, setProduct] = useState<carType>({
+      id: '',
+      name: '',
+      brand: '',
+      year: 0,
+      color: '',
+      description: '',
+      doors: 0,
+      images: [],
+      mileage: 0,
+      price: 0,
+      mortage: 0,
+      type: '',
+      transmission:  'estandar',
+      extra: []
+    });
+    const [loading, setLoading] = useState<boolean>(true);
     const router = useRouter()
 
-    const getProduct = async (id: any) => {
-        try {
-          const res = await axios.get(`${config.api}/products/${id}?populate=image`);
-          console.log('Product', res.data.data);
-          setProduct(res.data.data);
-        } catch (error) {
-          console.log(error)
-          console.error(error);
+    useEffect(() => {
+      if (router.query.id) {
+        const carFromDB = productsFromDB.filter((car: carType) => car.id === router.query.id);
+        if (carFromDB.length > 0) {
+          setProduct(carFromDB[0]);
         }
       }
-
-      useEffect(() => {
-        if (router.query.id) {
-            getProduct(router.query.id);
-        }
+      setLoading(false);
     }, [router.query.id]);
 
   return (
     <PrincipalLayout>
+      {loading ? (
+        <>CARGANDO</>
+      ):(
+        <>
         {product.id && (
           <>
-            <ProductHeadBar name={product.attributes.nombre} id={product.id} />
+            <ProductHeadBar name={product.name} id={product.id} />
             <ProductContainer product={product}/>
           </>
         )}
+        </>
+      )}
     </PrincipalLayout>
   )
 }

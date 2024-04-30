@@ -1,3 +1,5 @@
+import { carType } from './typing';
+
 export interface BenefitsProps {
     title: string; 
     content: string;
@@ -30,6 +32,6 @@ export interface ProductAtributes {
 }
 
 export interface ProductsProps {
-    id: number;
-    attributes: ProductAtributes;
+    id: string;
+    attributes: carType;
 }

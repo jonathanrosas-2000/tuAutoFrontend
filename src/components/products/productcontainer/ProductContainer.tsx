@@ -7,25 +7,26 @@ import DescriptonSummary from '../description/DescriptonSummary';
 import ProductByYear from '../productByYear/ProductByYear';
 import ProductByCity from '../productByCity/ProductByCity';
 import Image from 'next/image';
+import { carType } from '@/types/typing';
 
-const ProductContainer = ({product}: any) => {
-  const { nombre, ubicacionActual, anio, kilometraje, caracteristicas, descripcion, image } = product.attributes;
+const ProductContainer = ({product}: {product: carType}) => {
+  const { name, year, description, images, mileage, extra} = product;
 
   return (
     <div className={styles.container}>
       <div className={styles.car}>
         <div className={styles.imageContainer}>
-          {image ? (
-            <Image src={`${image.data[0].attributes.url}`} alt={`Carro seminuevo ${nombre}`} width={500} height={400} className={styles.image}/>
+          {images.length > 0 ? (
+            <Image src={`${images[0]}`} alt={`Carro seminuevo ${name}`} width={500} height={400} className={styles.image}/>
           ): (
             <h2>No image</h2>
           )}
         </div>
-        <Summary year={anio} version={'1'} milage={kilometraje} location={ubicacionActual}  />
-        {caracteristicas && <Features features={caracteristicas} />}
-        {descripcion && <DescriptonSummary description={descripcion} />}
-        <ProductByYear name={nombre} />
-        <ProductByCity name={nombre} />
+        <Summary year={year} version={'1'} milage={String(mileage)} location={'CDMX'}  />
+        {extra.length > 0 && <Features features={extra} />}
+        {!!description && <DescriptonSummary description={description} />}
+        <ProductByYear name={name} />
+        <ProductByCity name={name} />
       </div>
       <ProductCard product={product} />
     </div>

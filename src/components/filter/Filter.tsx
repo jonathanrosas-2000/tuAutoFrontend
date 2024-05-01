@@ -3,58 +3,12 @@ import { useState } from 'react'
 import Image from 'next/image'
 import styles from './styles.module.css'
 import filterIcon from '@/assets/icons/filter.svg'
-import arrowIcon from '@/assets/icons/arrow.svg'
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
 import BrandFilter from './brand/BrandFilter'
 import YearFilter from './year/YearFilter'
 import MileageFilter from './mileage/Mileage'
 import PriceFilter from './price/PriceFilter'
+import 'rc-slider/assets/index.css';
 
-// const YearFilter = ({years, yearFilter, setYearFilter}: { years: number[]; yearFilter: boolean; setYearFilter: (yearFilter: boolean) => void;}) => {
-//     const [selectedYears, setSelectedYears] = useState<number[]>([]);
-
-//     const toggleYear = (year: number) => {
-//         if(selectedYears.includes(year)) {
-//             setSelectedYears(selectedYears.filter(item => item !== year));
-//         } else {
-//             setSelectedYears([...selectedYears, year])
-//         }
-//     }
-
-//     return (
-//         <>
-//             <div onClick={() => setYearFilter(!yearFilter)} className={styles.item}>
-//                 <h5 className={styles.title}>Ańo</h5>
-//                 <Image 
-//                     src={arrowIcon} 
-//                     alt='Filtro por marca de coches' 
-//                     width={25} 
-//                     height={25} 
-//                     className={yearFilter ? styles.rotated : ''}
-//                 />
-//             </div>
-//             {yearFilter && (
-//                 <div className={styles.itemContainer}>
-//                     {years.map((year, index) => (
-//                         <div key={index} className={styles.element}>
-//                             <input
-//                                 type="checkbox"
-//                                 id={String(year)}
-//                                 name={String(year)}
-//                                 checked={selectedYears.includes(year)}
-//                                 onChange={() => toggleYear(year)}
-//                                 className={styles.checkbox}
-//                             />
-//                             <label htmlFor={String(year)}>{year}</label>
-//                         </div>
-//                     ))}
-//                 </div>
-//             )}
-               
-//         </>
-//     )
-// }
 
 const Filter = ( {brands, years, selectedYears, setSelectedYears}: {brands: string[]; years: number[]; selectedYears: any; setSelectedYears: any; }) => {
     const [openFilters, setOpenFilters] = useState<boolean>(true);

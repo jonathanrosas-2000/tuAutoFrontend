@@ -4,9 +4,16 @@ import Image from 'next/image'
 import styles from '../styles.module.css'
 import arrowIcon from '@/assets/icons/arrow.svg'
 
-const BrandFilter = ({brands, showBrandFilter, setShowBrandFilter} : {brands: string[]; showBrandFilter: boolean; setShowBrandFilter: (brandFilter: boolean) => void;}) => {
-        const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+type BrandFilterProps = {
+    brands: string[]; 
+    showBrandFilter: boolean; 
+    setShowBrandFilter: (brandFilter: boolean) => void;
+    selectedBrands: string[];
+    setSelectedBrands: (value: string[]) => void;
+}
 
+const BrandFilter = ({brands, showBrandFilter, setShowBrandFilter, selectedBrands, setSelectedBrands}: BrandFilterProps) => {
+        
         const toggleBrand = (brand: string) => {
             if (selectedBrands.includes(brand)) {
                 setSelectedBrands(selectedBrands.filter(item => item !== brand));

@@ -140,3 +140,12 @@
     font-size: 20px;
     text-align: center;
   }
+
+  .legend {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    color: gray;
+    text-align: center;
+    margin-bottom: 1rem;
+  }

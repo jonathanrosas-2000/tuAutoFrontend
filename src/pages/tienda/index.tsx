@@ -7,49 +7,36 @@ import {products as productsFromDB } from '@/data/cars';
 
 const Tienda = () => {
   const [ searchTerm, setSearchTerm ] = useState<string>('');
-  const [ brands, setBrands ] = useState<string[]>([]);
-  const [ products, setProducts ] = useState<carType[]>(productsFromDB);
+  const [ selectedBrands, setSelectedBrands ] = useState<string[]>([]);
+  const [ selectedMileage, setSelectedMileage] = useState<[number, number]>([0,125000]);
   const [ filterProducts, setFilterProducts ] = useState<any []>([]);
   const [ selectedYears, setSelectedYears ] = useState<number[]>([]);
   const [ loading, setLoading] = useState<boolean>(false);
 
-  // const getProducts = async () => {
-  //   try {
-  //     const res = await axios.get(`${config.api}/products?populate[0]=image&populate[1]=brand`);
-  //     setProducts(res.data.data);
-  //   } catch (error) {
-  //     console.error(error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // }
-
-  // const getBrands = async () => {
-  //   try {
-  //     const res = await axios.get(`${config.api}/brands`);
-  //     const tempArr: string[] = res.data.data.map((brand: any) => brand.attributes.name);
-  //     setBrands(tempArr);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
   useEffect(() => {
-    let aux = products;
+    let aux = productsFromDB;
     if(!!searchTerm){
-      aux = aux.filter((item: carType) => item?.name.toLocaleLowerCase().includes(searchTerm))
+      aux = aux.filter((item: carType) => item?.name.toLocaleLowerCase().includes(searchTerm));
     }
     if (selectedYears.length > 0) {
       aux = aux.filter((item) => selectedYears.includes(item.year));
     }
+
+    if (selectedBrands.length > 0){
+      aux = aux.filter((item) => selectedBrands.includes(item.brand));
+    }
+
+    if (selectedMileage[0] !== 0 || selectedMileage[1] !== 125000){
+      aux = aux.filter((item) => item.mileage >= selectedMileage[0] && item.mileage <= selectedMileage[1]);
+    }
     
     setFilterProducts(aux);
-  }, [products, searchTerm, selectedYears]);
+  }, [searchTerm, selectedYears, selectedBrands, selectedMileage]);
 
   const yearsSet = new Set();
   const brandSet = new Set();
 
-  const uniqueBrands = products.map((product: carType) => {
+  const uniqueBrands = productsFromDB.map((product: carType) => {
     if (!brandSet.has(product.brand)) {
       brandSet.add(product.brand);
         return product.brand;
@@ -57,7 +44,7 @@ const Tienda = () => {
     return null; // O puedes retornar undefined si prefieres
 }).filter(brand => brand !== null);
 
-  const uniqueYears = products.map((product: carType) => {
+  const uniqueYears = productsFromDB.map((product: carType) => {
       if (!yearsSet.has(product.year)) {
           yearsSet.add(product.year);
           return product.year;
@@ -71,10 +58,21 @@ const Tienda = () => {
         <Loader />
       ) : (
         <>
-        {products.length > 0 ? (
+        {productsFromDB.length > 0 ? (
           <>
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-            <Results products={filterProducts} searchTerm={searchTerm} brands={uniqueBrands} years={uniqueYears} selectedYears={selectedYears} setSelectedYears={setSelectedYears} />
+            <Results 
+            products={filterProducts} 
+            brands={uniqueBrands} 
+            years={uniqueYears} 
+            selectedBrands={selectedBrands} 
+            setSelectedBrands={setSelectedBrands} 
+            selectedYears={selectedYears} 
+            setSelectedYears={setSelectedYears} 
+            selectedMileage={selectedMileage}
+            setSelectedMileage={setSelectedMileage}
+            />
+            <p className='legend'>* Los precios de nuestros productos están sujetos a condiciones específicas, incluyendo el tipo de financiamiento y otras variables relevantes. Para obtener una cotización precisa y personalizada, le recomendamos que se ponga en contacto con uno de nuestros asesores.</p>
           </>
         ) : (
           <UnderMantainer />

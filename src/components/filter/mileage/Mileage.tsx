@@ -6,13 +6,20 @@ import 'rc-slider/assets/index.css';
 import styles from '../styles.module.css'
 import arrowIcon from '@/assets/icons/arrow.svg'
 
-const MileageFilter = ({ showMileageFilter, setShowMileageFilter}: {  showMileageFilter: boolean; setShowMileageFilter: (showMileageFilter: boolean) => void;}) => {
+const MileageFilter = ({ showMileageFilter, setShowMileageFilter, selectedMileage, setSelectedMileage}
+    :{ 
+        showMileageFilter: boolean; 
+        setShowMileageFilter: (showMileageFilter: boolean) => void; 
+        selectedMileage: [number, number];
+        setSelectedMileage: (value: [number, number]) => void;
+    }) => {
     const [minMileage, setMinMileage] = useState<number>(0);
-    const [maxMileage, setMaxMileage] = useState<number>(100);
+    const [maxMileage, setMaxMileage] = useState<number>(125000);
 
     const handleMileageChange = (value: any) => {
         setMinMileage(value[0]);
         setMaxMileage(value[1]);
+        setSelectedMileage([value[0], value[1]]);
     }
 
   return (
@@ -35,8 +42,9 @@ const MileageFilter = ({ showMileageFilter, setShowMileageFilter}: {  showMileag
                     </div>
                     <Slider
                     range
+                    step={5000}
                     min={0}
-                    max={100}
+                    max={125000}
                     value={[minMileage, maxMileage]}
                     onChange={handleMileageChange}
                     className='filterClass'

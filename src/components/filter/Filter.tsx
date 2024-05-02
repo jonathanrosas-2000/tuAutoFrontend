@@ -9,8 +9,18 @@ import MileageFilter from './mileage/Mileage'
 import PriceFilter from './price/PriceFilter'
 import 'rc-slider/assets/index.css';
 
+type FilterProps = {
+    brands: string[]; 
+    years: number[]; 
+    selectedYears: number[];
+    selectedBrands: string[];
+    selectedMileage: [number, number];
+    setSelectedYears: (value: number[]) => void;
+    setSelectedBrands: (value: string[]) => void;
+    setSelectedMileage: (value: [number, number]) => void;
+}
 
-const Filter = ( {brands, years, selectedYears, setSelectedYears}: {brands: string[]; years: number[]; selectedYears: any; setSelectedYears: any; }) => {
+const Filter = ( {brands, years, selectedYears, setSelectedYears, selectedBrands, setSelectedBrands, selectedMileage, setSelectedMileage}: FilterProps) => {
     const [openFilters, setOpenFilters] = useState<boolean>(true);
     const [showBrandFilter, setShowBrandFilter] = useState<boolean>(true);
     const [showYearFilter, setShowYearFilter] = useState<boolean>(true);
@@ -25,11 +35,22 @@ const Filter = ( {brands, years, selectedYears, setSelectedYears}: {brands: stri
         </div>
         {openFilters && (
             <div className={styles.filters}>
-                <BrandFilter brands={brands} showBrandFilter={showBrandFilter} setShowBrandFilter={setShowBrandFilter} />
+                <BrandFilter 
+                    brands={brands} 
+                    showBrandFilter={showBrandFilter} 
+                    setShowBrandFilter={setShowBrandFilter} 
+                    selectedBrands={selectedBrands} 
+                    setSelectedBrands={setSelectedBrands} 
+                />
                 <hr className={styles.separator}/>
                 <YearFilter years={years.sort((a, b) => b - a)} yearFilter={showYearFilter} setYearFilter={setShowYearFilter} selectedYears={selectedYears} setSelectedYears={setSelectedYears}/>
                 <hr className={styles.separator}/>
-                <MileageFilter showMileageFilter={showMileageFilter} setShowMileageFilter={setShowMileageFilter} />
+                <MileageFilter 
+                    showMileageFilter={showMileageFilter} 
+                    setShowMileageFilter={setShowMileageFilter} 
+                    selectedMileage={selectedMileage}
+                    setSelectedMileage={setSelectedMileage}
+                />
                 <hr className={styles.separator}/>
                 <PriceFilter showPriceFilter={showPriceFilter} setShowPriceFilter={setShowPriceFilter} />
                 <hr className={styles.separator}/>

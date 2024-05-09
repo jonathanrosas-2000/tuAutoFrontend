@@ -18,3 +18,4 @@ export { default as ProductHeadBar } from './products/headbar/HeadBar';
 export { default as ProductContainer } from './products/productcontainer/ProductContainer'
 export { default as Loader } from './general/lodaer/Loader';
 export { default as UnderMantainer } from './maintenance/index';
+export { default as Chatbot } from './chatbot/Chatbot';

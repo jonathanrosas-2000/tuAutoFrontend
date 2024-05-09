@@ -1,0 +1,51 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  .us {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #5b627d;
+  }
+
+  .title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    font-weight: 500;
+    color: #232938;
+
+    .span {
+        color: var(--blue-button);
+    }
+  }
+
+  .content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5b627d;
+    margin-bottom: 4rem;
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 768px) {
+    text-align: start;
+    flex-direction: row;
+    height: 75vh;
+
+    .us {
+      font-size: 1.4rem;
+    }
+  }
+}

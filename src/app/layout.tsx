@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "TuAutoSeminuevo | Compra Venta Cambio",
   description: "Conoce la mejor seleccion de autos",
   icons: {
-    icon: '/_next/static/media/favicon.3034ed9d.svg'
+    icon: '/car.png'
   }
 };
 

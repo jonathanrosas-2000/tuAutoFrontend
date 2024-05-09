@@ -3,6 +3,7 @@ export { default as Title } from './title/Title';
 export { default as Footer } from './principal/Footer';
 export { default as BreadCrumb } from './principal/BreadCrumbs';
 export { default as SEO } from './principal/SEO';
+export { default as SeoMeta } from './SEO'
 
 export { default as Hero } from './Hero';
 export { default as BrandSelector } from './BrandSelector';

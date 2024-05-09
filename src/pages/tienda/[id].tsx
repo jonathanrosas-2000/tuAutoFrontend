@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import PrincipalLayout from "@/layout/PrincipalLayout"
-import { ProductHeadBar, ProductContainer } from '@/components';
+import { ProductHeadBar, ProductContainer} from '@/components';
 import '@/styles/globals.css';
 import { useRouter } from 'next/router'
 import {products as productsFromDB } from '@/data/cars';
@@ -22,7 +22,18 @@ const ProductPage = () => {
       mortage: 0,
       type: '',
       transmission:  'estandar',
-      extra: []
+      extra: [],
+      seoDetails: {
+        title: "",
+        description: "",
+        keywords: [],
+        subject: "",
+        productSchema: {
+          additionalType: "",
+          description: "",
+          name: "",
+        },
+      },
     });
     const [loading, setLoading] = useState<boolean>(true);
     const router = useRouter()

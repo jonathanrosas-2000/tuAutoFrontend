@@ -1,4 +1,4 @@
-export interface Benefits {
+export interface BenefitsTypes {
     id: string;
     title: string;
     description: string;

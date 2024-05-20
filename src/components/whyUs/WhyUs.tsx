@@ -5,7 +5,7 @@ import treatIcon from '../../assets/icons/benefits/treat.svg';
 import priceIcon from '../../assets/icons/benefits/price.svg';
 import gradeIcon from '../../assets/icons/benefits/grade.svg';
 import { BenefitsProps } from '../../types/proptypes';
-import { Benefits } from '../../types/typing';
+import { BenefitsTypes } from '../../types/typing';
 import styles from './styles.module.css'
 
 const Benefits = ({ title, content, icon, alt }: BenefitsProps) => {
@@ -21,7 +21,7 @@ const Benefits = ({ title, content, icon, alt }: BenefitsProps) => {
 }
 
 const WhyUs = () => {
-    const BenefitsOfTheBrand:Benefits[] = [
+    const BenefitsOfTheBrand:BenefitsTypes[] = [
         {
             id: '001',
             title: 'Opciones de Financiamiento',
@@ -139,7 +139,7 @@ const WhyUs = () => {
     <div>
         <Title title={'¿Por qué nosotros?'} />
         <div className={styles.benefitsContainer}>
-            {BenefitsOfTheBrand.map((item: Benefits) => (
+            {BenefitsOfTheBrand.map((item: BenefitsTypes) => (
                 <Benefits 
                     key={item.id}
                     title={item.title}

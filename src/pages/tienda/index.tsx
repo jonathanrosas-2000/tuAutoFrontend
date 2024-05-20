@@ -4,14 +4,23 @@ import { SearchBar, Results, Loader, UnderMantainer } from '@/components';
 import '@/styles/globals.css';
 import {carType} from '@/types/typing';
 import {products as productsFromDB } from '@/data/cars';
+import { useRouter } from 'next/router';
 
 const Tienda = () => {
+  const router = useRouter();
+
   const [ searchTerm, setSearchTerm ] = useState<string>('');
-  const [ selectedBrands, setSelectedBrands ] = useState<string[]>([]);
+  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [ selectedMileage, setSelectedMileage] = useState<[number, number]>([0,125000]);
   const [ filterProducts, setFilterProducts ] = useState<any []>([]);
   const [ selectedYears, setSelectedYears ] = useState<number[]>([]);
   const [ loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if(router.query.brand !== undefined && typeof router.query.brand === 'string') {
+      setSelectedBrands([router.query.brand]);
+    }
+  }, [router.query.brand])
 
   useEffect(() => {
     let aux = productsFromDB;

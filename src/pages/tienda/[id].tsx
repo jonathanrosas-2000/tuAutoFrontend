@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import PrincipalLayout from "@/layout/PrincipalLayout"
-import { ProductHeadBar, ProductContainer} from '@/components';
+import { ProductHeadBar, ProductContainer, Chatbot} from '@/components';
 import '@/styles/globals.css';
 import { useRouter } from 'next/router'
 import {products as productsFromDB } from '@/data/cars';
@@ -58,6 +58,10 @@ const ProductPage = () => {
           <>
             <ProductHeadBar name={product.name} id={product.id} />
             <ProductContainer product={product}/>
+            <Chatbot 
+              message={`🌟 ¡Bienvenido! ¿Te interesa nuestro ${product.name} ${product.year}? 🚗`}
+              whatsAppMessage = {`¡Hola! Estoy interesado(a) en ${product.name} del ${product.year}`}      
+            />
           </>
         )}
         </>

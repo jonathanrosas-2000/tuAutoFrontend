@@ -87,10 +87,10 @@ const PriceCard = ({product}: {product: carType}) => {
           <div className={styles.separator}></div>
           <div className={styles.texts}>
             <h4 className={styles.text}>Mensualidad</h4>
-            <p className={styles.price}>{`$ ${(monthPayment).toFixed(1)}`} MXN</p>
-
+            <p className={styles.price}>{formatPrice(monthPayment)} MXN</p>
           </div>
         </div>
+        <p className={styles.legend}>* Los precios de nuestros productos están sujetos a condiciones específicas, incluyendo el tipo de financiamiento y otras variables relevantes. Para obtener una cotización precisa y personalizada, le recomendamos que se ponga en contacto con uno de nuestros asesores.</p>
     </div>
   )
 }

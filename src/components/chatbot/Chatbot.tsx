@@ -1,10 +1,16 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { SiWhatsapp } from "react-icons/si";
 import styles from "./chatbot.module.css";
+import { encodeText } from '@/helpers/textFunctions';
 
-const Chatbot = ({ message }: { message: string }) => {
+const Chatbot = ({ message, whatsAppMessage}: { message: string, whatsAppMessage: string }) => {
   const [showTooltip, setShowTooltip] = useState(true);
+
+  const handleButtonClick = () => {
+    window.open(`https://wa.me/5215635373026?text=${encodeText(whatsAppMessage)}`, '_blank');
+
+  };
 
   // Función para mostrar el tooltip al pasar el ratón por encima del botón
   const handleMouseEnter = () => {
@@ -25,7 +31,10 @@ const Chatbot = ({ message }: { message: string }) => {
   }, [showTooltip]);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onClick={handleButtonClick}
+    >
       <div className={styles.message}>
         {/* Mostrar el tooltip si showTooltip es verdadero */}
         {showTooltip && (
@@ -35,10 +44,7 @@ const Chatbot = ({ message }: { message: string }) => {
           </div>
         )}
       </div>
-      <div
-        className={styles.button}
-        onMouseEnter={handleMouseEnter}
-      >
+      <div className={styles.button} onMouseEnter={handleMouseEnter}>
         <SiWhatsapp className={styles.icon} />
       </div>
     </div>

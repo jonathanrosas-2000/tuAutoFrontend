@@ -10,7 +10,10 @@ export default function Home() {
         <SellYourCar />
         <WhyUs />
       </PrincipalLayout>
-      <Chatbot message='🌟 ¡Bienvenidos a nuestra página! 🚗💨¿Buscas un coche que se adapte a tu estilo y necesidades?' />
+      <Chatbot 
+        message='🌟 ¡Bienvenidos a nuestra página! 🚗💨¿Buscas un coche que se adapte a tu estilo y necesidades?' 
+        whatsAppMessage = '¡Hola! Estoy buscando un vehículo y me gustaría saber qué opciones tienen disponibles.'      
+      />
     </>
   );
 }

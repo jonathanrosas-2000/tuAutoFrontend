@@ -16,7 +16,7 @@ const Hero = () => {
                 <h1 className={styles.header}>Consigue tu automovil seminuevo con grandes precios.</h1>
                 <p className={styles.subtitle}>Conoce nuestro catalogo y ven por tu automovil hoy mismo.</p>
             </div>
-            <button className={styles.discover} onClick={handleRedirection}>Descubre más <Image src={arrowIcon} alt='Right arrows icons' width={20} height={20}/></button>
+            <button className={styles.discover} onClick={handleRedirection}>Ir a la tienda <Image src={arrowIcon} alt='Right arrows icons' width={20} height={20}/></button>
         </div>
         <Image src={carImage} alt='Car image' className={styles.image} />
         

@@ -5,6 +5,7 @@
     background: linear-gradient(90deg, rgba(38,31,108,1) 0%, rgba(9,9,121,1) 63%, rgba(35,180,255,1) 100%);
     position: relative;
     z-index: 1;
+    margin-bottom: 2.5rem;
 
     .content {
         width: 90%;

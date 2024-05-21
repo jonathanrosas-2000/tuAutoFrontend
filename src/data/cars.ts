@@ -29,14 +29,14 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "ajsdasd",
-      description: "aodjoasidilasd",
-      keywords: ['sdsdsd', 'sdsdsad', 'fdfdvd'],
-      subject: "aksdjasgd",
+      title: "Promaster Rapi: Solución Eficiente para Empresas",
+      description: "La Promaster Rapi 2020 es la solución eficiente para empresas. Ofrece gran capacidad de carga y fiabilidad, ideal para el trabajo diario.",
+      keywords: ['Promaster', 'Rapi 2020'],
+      subject: "",
       productSchema: {
-        additionalType: "sdjkabkdsjbds",
-        description: "dslfiadisfsd",
-        name: "Nombre del producto",
+        additionalType: "",
+        description: "",
+        name: "",
       },
     },
   },
@@ -63,9 +63,12 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
-      keywords: [],
+      title: "Aveo LS: Confiabilidad y Precio Competitivo",
+      description: "Descubre ofertas exclusivas en el Chevrolet Aveo 2019. Compra ahora y disfruta de un auto confiable, eficiente y elegante. ¡Financiamiento disponible!",
+      keywords: [
+        'chevrolet aveo',
+        'aveo 2019' 
+      ],
       subject: "",
       productSchema: {
         additionalType: "",
@@ -98,8 +101,8 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "Avanza: Vehículo Económico y Espacioso",
+      description: "Descubre el Avanza 2019. Un vehículo espacioso y confiable con diseño moderno, ideal para familias que buscan comodidad y versatilidad en sus viajes.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -133,8 +136,8 @@ export const products: carType[] = [
       "Bolsas de aire frontales y laterales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "Versa Exclusive: Auto Familiar con Espacio y Confort",
+      description: "El Versa Exclusive 2019 ofrece espacio y confort. Perfecto para familias que buscan un auto moderno y versátil para sus viajes diarios.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -167,8 +170,8 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "March Active: Compacto, Eficiente y Práctico",
+      description: "March Active 2018 es un compacto eficiente y práctico. Ideal para quienes buscan maniobrabilidad y economía en sus desplazamientos urbanos.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -201,8 +204,8 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "Spark NG: Auto Urbano Ágil y Accesible",
+      description: "Spark NG 2017 es un auto urbano ágil y accesible. Diseñado para la vida en la ciudad, combina estilo y funcionalidad en un tamaño compacto.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -236,8 +239,8 @@ export const products: carType[] = [
       "Vestiduras Vicolor Cafe y Negro",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "Sonic LT: Estilo y Eficiencia para la Ciudad",
+      description: "Sonic LT 2016 ofrece estilo y eficiencia para la ciudad. Un vehículo que destaca por su diseño atractivo y su rendimiento óptimo en el entorno urbano.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -270,8 +273,8 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "Gol Imotion: Innovación Automática Económica",
+      description: "El Gol Imotion 2017 combina innovación y economía en un vehículo automático. Perfecto para quienes buscan tecnología avanzada y eficiencia en su conducción diaria.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -304,8 +307,8 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "Gol Sedan: Espacio y Comodidad a Crédito",
+      description: "Gol Sedan 2013 ofrece espacio y comodidad. Un auto ideal para quienes necesitan un vehículo confiable con gran capacidad interior.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -338,8 +341,8 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "KWID: Auto Pequeño Automático y Funcional",
+      description: "KWID 2022 es un auto pequeño automático y funcional. Perfecto para la vida urbana, combina practicidad con un diseño moderno y compacto.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -372,8 +375,8 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "Figo Impulse: Confort y Precio Accesible",
+      description: "El Figo Impulse 2017 combina confort y precio accesible. Un auto diseñado para ofrecer una experiencia de conducción cómoda y económica.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -406,8 +409,8 @@ export const products: carType[] = [
       "Bolsas de aire frontales",
     ],
     seoDetails: {
-      title: "",
-      description: "",
+      title: "City Lx: Diseño Elegante y Urbano",
+      description: "El City Lx 2016 destaca por su diseño elegante y urbano. Un vehículo ideal para quienes buscan estilo y funcionalidad en sus desplazamientos diarios.",
       keywords: [],
       subject: "",
       productSchema: {

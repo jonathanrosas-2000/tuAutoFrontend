@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from 'react';
 import PrincipalLayout from "@/layout/PrincipalLayout"
 import { SearchBar, Results, Loader, UnderMantainer } from '@/components';
@@ -25,7 +26,7 @@ const Tienda = () => {
   useEffect(() => {
     let aux = productsFromDB;
     if(!!searchTerm){
-      aux = aux.filter((item: carType) => item?.name.toLocaleLowerCase().includes(searchTerm));
+      aux = aux.filter((item: carType) => item?.name.toLocaleLowerCase().includes(searchTerm) || item?.brand.toLocaleLowerCase().includes(searchTerm));
     }
     if (selectedYears.length > 0) {
       aux = aux.filter((item) => selectedYears.includes(item.year));

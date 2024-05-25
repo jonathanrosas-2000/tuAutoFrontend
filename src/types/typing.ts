@@ -38,3 +38,17 @@ export interface carType {
     seoDetails: SeoDetailsType;
 }
 
+// Define el tipo de datos para el contexto
+export interface FilterContextType {
+    searchTerm: string;
+    setSearchTerm: (term: string) => void;
+    selectedBrands: string[];
+    setSelectedBrands: (brands: string[]) => void;
+    selectedMileage: [number, number];
+    setSelectedMileage: (mileage: [number, number]) => void;
+    filterProducts: any[];
+    setFilterProducts: (products: any[]) => void;
+    selectedYears: number[];
+    setSelectedYears: (years: number[]) => void;
+  }
+  

@@ -386,38 +386,4 @@ export const products: carType[] = [
       },
     },
   },
-  {
-    id: "qmoar84rpdxqvbriqve",
-    name: "City LX",
-    brand: "Honda",
-    year: 2016,
-    color: "plata",
-    description: "",
-    doors: 4,
-    images: [
-      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540953/principal/CityLX/fu0oydqa8nz9dhf90qsu.jpg",
-    ],
-    mileage: 110238,
-    price: 188000,
-    mortage: 37600,
-    type: "sedan",
-    transmission: "estandar",
-    extra: [
-      "Motor 1.6L",
-      "Rin 15 de acero",
-      "AM/FM /CD/BLUETOTH",
-      "Bolsas de aire frontales",
-    ],
-    seoDetails: {
-      title: "City Lx: Diseño Elegante y Urbano",
-      description: "El City Lx 2016 destaca por su diseño elegante y urbano. Un vehículo ideal para quienes buscan estilo y funcionalidad en sus desplazamientos diarios.",
-      keywords: [],
-      subject: "",
-      productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
-      },
-    },
-  },
 ];

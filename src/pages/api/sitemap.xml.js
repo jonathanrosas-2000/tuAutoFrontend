@@ -3,7 +3,6 @@ import { SitemapStream, streamToPromise } from "sitemap";
 import { Readable } from "stream";
 
 export default async (req, res) => {
-  // Listado de tus páginas
   const sitemap = [
     { url: "/", changefreq: "monthly", priority: 1.0 },
     { url: "/faq", changefreq: "yearly", priority: 0.8 },

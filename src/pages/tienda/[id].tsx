@@ -57,7 +57,7 @@ const ProductPage = () => {
         {product.id && (
           <>
             <ProductHeadBar name={product.name} id={product.id} />
-            <ProductContainer product={product}/>
+            <ProductContainer key={product.id} product={product}/>
             <Chatbot 
               message={`🌟 ¡Bienvenido! ¿Te interesa nuestro ${product.name} ${product.year}? 🚗`}
               whatsAppMessage = {`¡Hola! Estoy interesado(a) en ${product.name} del ${product.year}`}      

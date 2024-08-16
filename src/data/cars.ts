@@ -2,7 +2,7 @@ import { carType } from "../types/typing";
 
 export const products: carType[] = [
   {
-    id: "qmmly5nbkzrid563wpn",
+    id: "promaster-rapi-dodge-2020",
     name: "Promaster Rapi",
     brand: "Dodge",
     year: 2020,
@@ -41,7 +41,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmmlylqqsus02vlx9f",
+    id: "chevrolet-aveo-ls-2019",
     name: "Aveo LS",
     brand: "Chevrolet",
     year: 2019,
@@ -78,7 +78,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmmm1hhi4jg323h0ff6",
+    id: "toyota-avanza-2019",
     name: "Avanza",
     brand: "Toyota",
     year: 2019,
@@ -113,7 +113,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmmm1p1r7bqn6xao66m",
+    id: "nissan-versa-exclusive-2019",
     name: "Versa Exclusive",
     brand: "Nissan",
     year: 2019,
@@ -148,7 +148,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmoa20qbnrx8rcg43nl",
+    id: "nissan-march-active-2018",
     name: "March Active",
     brand: "Nissan",
     year: 2018,
@@ -182,7 +182,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmoa8m4dudtgqsas8u",
+    id: "chevrolet-spark-ng-2017",
     name: "Spark NG",
     brand: "Chevrolet",
     year: 2017,
@@ -216,7 +216,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmoadj0wojh3ej3em4",
+    id: "chevrolet-sonic-lt-2016",
     name: "Sonic LT",
     brand: "Chevrolet",
     year: 2016,
@@ -251,7 +251,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmoahmddd13dpya0od",
+    id: "volkswagen-gol-imotion-2017",
     name: "Gol Imotion",
     brand: "Volkswagen",
     year: 2017,
@@ -285,7 +285,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmoakbfxv5h1xdnxiwf",
+    id: "volkswagen-gol-sedan-2013",
     name: "Gol Sedan",
     brand: "Volkswagen",
     year: 2013,
@@ -319,7 +319,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmoam7cvzvjfz9cndp",
+    id: "renault-kwid-2022",
     name: "Kwid",
     brand: "Renault",
     year: 2022,
@@ -353,7 +353,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "qmoapd6szqyzrxp02ph",
+    id: "ford-figo-impulse-2017",
     name: "Figo Impulse",
     brand: "Ford",
     year: 2017,

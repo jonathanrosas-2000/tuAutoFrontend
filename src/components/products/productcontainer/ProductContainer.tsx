@@ -36,13 +36,14 @@ const ProductContainer = ({ product }: { product: carType }) => {
         <div className={styles.car}>
           <div className={styles.imageContainer}>
             {images.length > 0 ? (
-              <Carousel useKeyboardArrows={true}>
-                {images.map((URL, index) => (
-                  <div className="slide">
-                    <img alt="sample_file" src={URL} key={index} />
-                  </div>
-                ))}
-              </Carousel>
+              <Image
+                key={images[0]}
+                src={`${images[0]}`}
+                alt={`Carro seminuevo ${name}`}
+                width={500}
+                height={400}
+                className={styles.image}
+              />
             ) : (
               <h2>No image</h2>
             )}

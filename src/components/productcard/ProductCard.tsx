@@ -6,8 +6,7 @@ import { formatPrice } from '../../helpers/priceFunction';
 import config from '../../common/config'
 
 const ProductCard = ( { id, attributes }: ProductsProps ) => {
-    const { name, year, brand, color, description, doors, images, mileage, price, mortage, type, transmission, extra} = attributes;
-
+    const { name, year, images, mileage, price, mortage, lastAdded} = attributes;
     const getPriceWithoutMortage = (price: number) => {
       return formatPrice(Math.round((price - mortage) * 1.8 / Number(config.default_months)))
     }
@@ -25,6 +24,11 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
             <Image src={TuAutoSeminiuevoLogo} alt='TuAutoSeminuevo logo' width={200} height={180} />
           )}
         </div>
+        {lastAdded && (
+        <div className={styles.newProduct}>
+          Agregado recientemente
+        </div>
+      )}
         <div className={styles.data}>
           <h3 className={styles.name}>{name}</h3>
           <div className={styles.info}>

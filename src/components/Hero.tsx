@@ -19,7 +19,7 @@ const Hero = () => {
           </h1>
         </div>
         <button className={styles.discover} onClick={handleRedirection}>
-          Ir a la tienda{" "}
+          Ir a la tienda
           <Image
             src={arrowIcon}
             alt="Right arrows icons"

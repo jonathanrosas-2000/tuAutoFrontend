@@ -1,4 +1,5 @@
 .card {
+    position: relative;
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
@@ -77,6 +78,26 @@
         }
     }
 
+}
+
+.newProduct {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    /* background-color: #007892; */
+    /* color: white; */
+    background-color: #ffeb3b;
+    color: #1E293B;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+    
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
 }
 
 .card:hover {

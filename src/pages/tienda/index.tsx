@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import PrincipalLayout from "@/layout/PrincipalLayout"
-import { SearchBar, Results, Loader, UnderMantainer } from '@/components';
+import { SearchBar, Results, Loader, UnderMantainer, SeoMeta } from '@/components';
 import '@/styles/globals.css';
 import {carType} from '@/types/typing';
 import {products as productsFromDB } from '@/data/cars';
@@ -64,6 +64,12 @@ const Tienda = () => {
 
   return (
     <PrincipalLayout>
+      <SeoMeta 
+        title='Compra tu auto hoy mismo'
+        description='Consigue tu auto usado o con poco uso con un angenche bajo o busca los paquetes de precio con prestamos que se ajusten a ti'
+        keywords={['Auto usado', 'Auto seminuevo', 'Comprar coche']}
+        subject='Comprar coche con poco uso'
+      />
       {loading ? (
         <Loader />
       ) : (

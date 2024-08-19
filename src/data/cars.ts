@@ -2,6 +2,134 @@ import { carType } from "../types/typing";
 
 export const products: carType[] = [
   {
+    id: "volkswagen-gol-hb-2018",
+    name: "Volkswagen Gol HB",
+    brand: "Volkswagen",
+    year: 2018,
+    color: "gris",
+    description:
+      "El Volkswagen Gol HB del año 2018 es un compacto versátil y eficiente, ideal para el uso urbano y viajes cortos. Presentado en un elegante color gris, este vehículo combina un diseño moderno con funcionalidad práctica. Equipado con un motor de 1.6L, el Gol HB ofrece un balance ideal entre potencia y economía de combustible. Cuenta con cuatro puertas que facilitan el acceso a su interior cómodo y bien diseñado, con vestiduras de color negro que aportan un toque de elegancia. En cuanto a tecnología, incluye un sistema de entretenimiento AM/FM con conectividad Bluetooth, permitiendo una experiencia de conducción cómoda y conectada. Además, para la seguridad de los ocupantes, el Gol HB está equipado con bolsas de aire frontales. Con un kilometraje de 52,345 kilómetros, este Volkswagen Gol HB es una opción confiable para quienes buscan un vehículo compacto con buen rendimiento y fiabilidad. Su transmisión estándar garantiza una conducción ágil y eficiente.",
+    doors: 4,
+    images: [
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1724037988/principal/GolHB/tbjttgjiusv7lg5x7xiy.jpg",
+    ],
+    mileage: 93000,
+    price: 168000,
+    mortage: 33600,
+    type: "compacto",
+    transmission: "estandar",
+    extra: [
+      "Motor 1.6L",
+      "Vestiduras negras",
+      "Dirección hidráulica",
+      "Alarma antirrobo",
+      "Cinturones de seguridad laterales de tres puntos",
+      "Cinturón de seguridad central trasero pélvico",
+      "Frenos ABS",
+      "Bolsas de aire frontales",
+      "Aire acondicionado",
+      "Cierre centralizado",
+      "Computadora de viaje",
+      "Vidrios delanteros eléctricos",
+      "Reproductor de CD, MP3, auxiliar, USB, tarjeta SD y Bluetooth",
+      "Sistema de sonido de 6 bocinas",
+      "Manos libres",
+      "Base universal para celular en tablero",
+      "USB de carga debajo de la base universal",
+      "Carcasas de espejos y manijas en negro mate",
+      "Rines de acero de 15 pulgadas con tapones",
+    ],
+    lastAdded: true,
+    seoDetails: {
+      title: "Volkswagen Gol HB: Compacto y Eficiente para la Ciudad",
+      description:
+        "El Volkswagen Gol HB 2018 es el compacto ideal para la ciudad, con gran economía de combustible y confiabilidad para el uso diario.",
+      keywords: ["Volkswagen", "Gol HB 2018"],
+      subject: "",
+      productSchema: {
+        additionalType: "",
+        description: "",
+        name: "",
+      },
+    },
+  },
+  {
+    id: "volkswagen-vento-comfortline-2019",
+    name: "Volkswagen Vento Comfortline",
+    brand: "Volkswagen",
+    year: 2019,
+    color: "plata",
+    description:
+      "El Volkswagen Vento Comfortline Automático del año 2019 es un sedán espacioso y cómodo, perfecto para quienes buscan elegancia y rendimiento en un solo paquete. Con un elegante color plata, este vehículo destaca por su diseño refinado y características avanzadas. Equipado con un motor de 1.6L, el Vento ofrece un rendimiento equilibrado, ideal para viajes largos y conducción en ciudad. Su transmisión automática proporciona una experiencia de manejo suave y sin esfuerzo. El interior, con vestiduras en color negro, ofrece un ambiente sofisticado y cómodo para todos los pasajeros. Además, cuenta con un sistema de entretenimiento AM/FM con conectividad Bluetooth y bolsas de aire frontales para la seguridad. Con un kilometraje de 102,387 kilómetros, este Volkswagen Vento Comfortline es una opción confiable para quienes buscan un sedán elegante y funcional.",
+    doors: 4,
+    images: [
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1724038011/principal/vento/mvsn1s91pt6yy2ihtxsm.jpg",
+    ],
+    mileage: 102000,
+    price: 210000,
+    mortage: 42000,
+    type: "sedán",
+    transmission: "automatica",
+    extra: [
+      "Motor 1.6L 105 Hp / 153 Nm",
+      "Sistema antibloqueo de frenos ABS",
+      "Bolsas de aire frontales",
+      "Nueva fascia delantera y trasera",
+      "Aire acondicionado",
+      "Radio con Bluetooth® para telefonía y audio",
+    ],
+    lastAdded: true,
+    seoDetails: {
+      title: "Volkswagen Vento Comfortline: Elegancia y Rendimiento",
+      description:
+        "El Volkswagen Vento Comfortline 2019 combina elegancia y rendimiento en un sedán automático ideal para el uso diario y viajes largos.",
+      keywords: ["Volkswagen", "Vento Comfortline 2019"],
+      subject: "",
+      productSchema: {
+        additionalType: "",
+        description: "",
+        name: "",
+      },
+    },
+  },
+  {
+    id: "renault-duster-zen",
+    name: "Renault Duster Zen",
+    brand: "Renault",
+    year: 2019,
+    color: "oxford",
+    description:
+      "La Renault Duster Zen 2019 es una SUV robusta y versátil, diseñada para quienes buscan comodidad y capacidad en todo tipo de terrenos. Con un color negro elegante, este vehículo se destaca por su diseño moderno y atractivo. Está equipada con un motor de 2.0L, ofreciendo un rendimiento confiable tanto en ciudad como en carretera. El interior cuenta con vestiduras en color gris, proporcionando un ambiente cómodo para todos los pasajeros. Incluye un sistema de entretenimiento AM/FM con conectividad Bluetooth y bolsas de aire frontales para la seguridad. Con un kilometraje de 64,593 kilómetros, esta Renault Duster Zen es ideal para quienes buscan una SUV confiable y funcional para cualquier aventura. Su transmisión manual permite un control preciso en cualquier situación.",
+    doors: 4,
+    images: [
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1724038029/principal/Duster/nj6kqaq3dmcx8eur7fqu.jpg",
+    ],
+    mileage: 64500,
+    price: 205000,
+    mortage: 41000,
+    type: "SUV",
+    transmission: "estandar",
+    extra: [
+      "Motor 2.0L",
+      "Vestiduras grises",
+      "AM/FM BLUETOOTH",
+      "Bolsas de aire frontales",
+    ],
+    lastAdded: true,
+    seoDetails: {
+      title: "Renault Duster Zen: La SUV Robusta y Versátil",
+      description:
+        "La Renault Duster Zen 2019 es la SUV ideal para aventuras, combinando robustez y comodidad en todo tipo de terrenos.",
+      keywords: ["Renault", "Duster Zen 2019"],
+      subject: "",
+      productSchema: {
+        additionalType: "",
+        description: "",
+        name: "",
+      },
+    },
+  },
+  {
     id: "promaster-rapi-dodge-2020",
     name: "Promaster Rapi",
     brand: "Dodge",
@@ -30,8 +158,9 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "Promaster Rapi: Solución Eficiente para Empresas",
-      description: "La Promaster Rapi 2020 es la solución eficiente para empresas. Ofrece gran capacidad de carga y fiabilidad, ideal para el trabajo diario.",
-      keywords: ['Promaster', 'Rapi 2020'],
+      description:
+        "La Promaster Rapi 2020 es la solución eficiente para empresas. Ofrece gran capacidad de carga y fiabilidad, ideal para el trabajo diario.",
+      keywords: ["Promaster", "Rapi 2020"],
       subject: "",
       productSchema: {
         additionalType: "",
@@ -64,11 +193,9 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "Aveo LS: Confiabilidad y Precio Competitivo",
-      description: "Descubre ofertas exclusivas en el Chevrolet Aveo 2019. Compra ahora y disfruta de un auto confiable, eficiente y elegante. ¡Financiamiento disponible!",
-      keywords: [
-        'chevrolet aveo',
-        'aveo 2019' 
-      ],
+      description:
+        "Descubre ofertas exclusivas en el Chevrolet Aveo 2019. Compra ahora y disfruta de un auto confiable, eficiente y elegante. ¡Financiamiento disponible!",
+      keywords: ["chevrolet aveo", "aveo 2019"],
       subject: "",
       productSchema: {
         additionalType: "",
@@ -102,7 +229,8 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "Avanza: Vehículo Económico y Espacioso",
-      description: "Descubre el Avanza 2019. Un vehículo espacioso y confiable con diseño moderno, ideal para familias que buscan comodidad y versatilidad en sus viajes.",
+      description:
+        "Descubre el Avanza 2019. Un vehículo espacioso y confiable con diseño moderno, ideal para familias que buscan comodidad y versatilidad en sus viajes.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -137,7 +265,8 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "Versa Exclusive: Auto Familiar con Espacio y Confort",
-      description: "El Versa Exclusive 2019 ofrece espacio y confort. Perfecto para familias que buscan un auto moderno y versátil para sus viajes diarios.",
+      description:
+        "El Versa Exclusive 2019 ofrece espacio y confort. Perfecto para familias que buscan un auto moderno y versátil para sus viajes diarios.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -171,7 +300,8 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "March Active: Compacto, Eficiente y Práctico",
-      description: "March Active 2018 es un compacto eficiente y práctico. Ideal para quienes buscan maniobrabilidad y economía en sus desplazamientos urbanos.",
+      description:
+        "March Active 2018 es un compacto eficiente y práctico. Ideal para quienes buscan maniobrabilidad y economía en sus desplazamientos urbanos.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -205,7 +335,8 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "Spark NG: Auto Urbano Ágil y Accesible",
-      description: "Spark NG 2017 es un auto urbano ágil y accesible. Diseñado para la vida en la ciudad, combina estilo y funcionalidad en un tamaño compacto.",
+      description:
+        "Spark NG 2017 es un auto urbano ágil y accesible. Diseñado para la vida en la ciudad, combina estilo y funcionalidad en un tamaño compacto.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -240,7 +371,8 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "Sonic LT: Estilo y Eficiencia para la Ciudad",
-      description: "Sonic LT 2016 ofrece estilo y eficiencia para la ciudad. Un vehículo que destaca por su diseño atractivo y su rendimiento óptimo en el entorno urbano.",
+      description:
+        "Sonic LT 2016 ofrece estilo y eficiencia para la ciudad. Un vehículo que destaca por su diseño atractivo y su rendimiento óptimo en el entorno urbano.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -274,7 +406,8 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "Gol Imotion: Innovación Automática Económica",
-      description: "El Gol Imotion 2017 combina innovación y economía en un vehículo automático. Perfecto para quienes buscan tecnología avanzada y eficiencia en su conducción diaria.",
+      description:
+        "El Gol Imotion 2017 combina innovación y economía en un vehículo automático. Perfecto para quienes buscan tecnología avanzada y eficiencia en su conducción diaria.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -308,7 +441,8 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "Gol Sedan: Espacio y Comodidad a Crédito",
-      description: "Gol Sedan 2013 ofrece espacio y comodidad. Un auto ideal para quienes necesitan un vehículo confiable con gran capacidad interior.",
+      description:
+        "Gol Sedan 2013 ofrece espacio y comodidad. Un auto ideal para quienes necesitan un vehículo confiable con gran capacidad interior.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -342,7 +476,8 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "KWID: Auto Pequeño Automático y Funcional",
-      description: "KWID 2022 es un auto pequeño automático y funcional. Perfecto para la vida urbana, combina practicidad con un diseño moderno y compacto.",
+      description:
+        "KWID 2022 es un auto pequeño automático y funcional. Perfecto para la vida urbana, combina practicidad con un diseño moderno y compacto.",
       keywords: [],
       subject: "",
       productSchema: {
@@ -376,7 +511,8 @@ export const products: carType[] = [
     ],
     seoDetails: {
       title: "Figo Impulse: Confort y Precio Accesible",
-      description: "El Figo Impulse 2017 combina confort y precio accesible. Un auto diseñado para ofrecer una experiencia de conducción cómoda y económica.",
+      description:
+        "El Figo Impulse 2017 combina confort y precio accesible. Un auto diseñado para ofrecer una experiencia de conducción cómoda y económica.",
       keywords: [],
       subject: "",
       productSchema: {

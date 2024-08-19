@@ -52,6 +52,21 @@ export default async (req, res) => {
     },
     { url: "/tienda/renault-kwid-2022", changefreq: "yearly", priority: 0.6 },
     {
+      url: "/tienda/volkswagen-gol-hb-2018",
+      changefreq: "yearly",
+      priority: 0.6,
+    },
+    {
+      url: "/tienda/volkswagen-vento-comfortline-2019",
+      changefreq: "yearly",
+      priority: 0.6,
+    },
+    {
+      url: "/tienda/renault-duster-zen-2019",
+      changefreq: "yearly",
+      priority: 0.6,
+    },
+    {
       url: "/tienda/ford-figo-impulse-2017",
       changefreq: "yearly",
       priority: 0.6,

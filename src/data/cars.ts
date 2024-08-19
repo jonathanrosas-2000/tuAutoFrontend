@@ -93,7 +93,7 @@ export const products: carType[] = [
     },
   },
   {
-    id: "renault-duster-zen",
+    id: "renault-duster-zen-2019",
     name: "Renault Duster Zen",
     brand: "Renault",
     year: 2019,

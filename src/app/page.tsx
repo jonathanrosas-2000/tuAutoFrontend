@@ -1,7 +1,10 @@
+import { redirect } from 'next/navigation';
 import { Chatbot, Hero, BrandSelector, SellYourCar, WhyUs, Footer } from '@/components'
 import PrincipalLayout from '@/layout/PrincipalLayout';
 
 export default function Home() {
+  redirect('/tienda');
+  
   return (
     <>
       <PrincipalLayout>

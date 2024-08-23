@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import arrowIcon from "../assets/icons/rightArrow.svg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import carImage from "../assets/car.png";
+import carImage from "@car.png";
 import styles from "../styles/principal/hero.module.css";
 
 const Hero = () => {

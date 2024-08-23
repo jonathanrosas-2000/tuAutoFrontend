@@ -34,7 +34,7 @@ const SEO = ({title, description, keywords, subject, productSchema }:SeoDetailsT
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                     />
                 )}
-                <link rel="shortcut icon" href="/car.png" />
+                {/* <link rel="shortcut icon" href="/car.png" /> */}
             </Head>
         </>
     )

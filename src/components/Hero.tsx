@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import arrowIcon from "../assets/icons/rightArrow.svg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import carImage from "@car.png";
 import styles from "../styles/principal/hero.module.css";
 
 const Hero = () => {
@@ -32,7 +31,7 @@ const Hero = () => {
           <MdOutlineKeyboardArrowRight className={styles.icon}/>
         </Link>
       </div>
-      <Image src={carImage} alt="Car image" className={styles.image} />
+      {/* <Image src={carImage} alt="Car image" className={styles.image} /> */}
     </div>
   );
 };

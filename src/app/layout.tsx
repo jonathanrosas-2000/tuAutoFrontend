@@ -8,9 +8,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "TuAutoSeminuevo | Compra Venta Cambio",
   description: "Conoce la mejor seleccion de autos",
-  icons: {
-    icon: '/car.png'
-  }
 };
 
 export default function RootLayout({

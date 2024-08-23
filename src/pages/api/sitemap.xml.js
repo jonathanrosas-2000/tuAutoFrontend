@@ -1,8 +1,9 @@
 // pages/api/sitemap.xml.js
+// pages/api/sitemap.xml.js
 import { SitemapStream, streamToPromise } from "sitemap";
 import { Readable } from "stream";
 
-export default async (req, res) => {
+const generateSitemap = async (req, res) => {
   const sitemap = [
     { url: "/", changefreq: "monthly", priority: 1.0 },
     { url: "/faq", changefreq: "yearly", priority: 0.8 },
@@ -83,3 +84,5 @@ export default async (req, res) => {
   ).then((data) => data.toString());
   res.end(xmlString);
 };
+
+export default generateSitemap;

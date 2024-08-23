@@ -37,7 +37,7 @@ const PriceCard = ({product}: {product: carType}) => {
 
         setMortage(enganche);
         setMonthPayment(pagoMensual)
-     }, [selectedMonths, selectedPercentage]);
+     }, [price, selectedMonths, selectedPercentage]);
 
   return (
     <div className={styles.card}>

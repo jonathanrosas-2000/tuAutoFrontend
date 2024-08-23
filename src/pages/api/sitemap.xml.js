@@ -1,4 +1,5 @@
 // pages/api/sitemap.xml.js
+// pages/api/sitemap.xml.js
 import { SitemapStream, streamToPromise } from "sitemap";
 import { Readable } from "stream";
 

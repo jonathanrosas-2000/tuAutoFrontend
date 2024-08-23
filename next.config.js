@@ -6,7 +6,18 @@ const nextConfig = {
     DEFAULT_MONTHS: process.env.DEFAULT_MONTHS
   },
   images: {
-    domains: ['localhost', 'res.cloudinary.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        pathname: '**',
+      },
+    ],
   },
 };
 

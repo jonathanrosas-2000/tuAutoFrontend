@@ -1,66 +1,43 @@
+
 .container {
+  width: 90%;
+  height: 10%;
   position: fixed;
   z-index: 100;
   bottom: 20px;
-  right: 0;
-  padding: 1rem;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 
-  .button {
-    border: none;
-    cursor: pointer;
-    width: 80px;
-    height: 80px;
-    background-color: #25d366;
-    border-radius: 999px;
+  .message {
+    width: 90%;
+    background-color: white;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    padding: 15px;
+    border-radius: 20px;
+  }
+  .hidden {
+    visibility: hidden;
+  }
+  .whatsbutton {
+    width: 60px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
+    background-color: #25d366;
+    border-radius: 999px;
     .icon {
-      font-size: 45px;
+      font-size: 30px;
       color: white;
     }
+    cursor: pointer;
   }
-
-  .message {
-    position: relative;
-
-    .tooltip {
-      position: absolute;
-      width: 90%;
-      min-width: 450px;
-      padding-right: 6.5rem;
-      right: 0;
-      display: flex;
-
-      .background {
-        position: relative;
-        background-color: white;
-        display: flex;
-        color: black;
-        align-items: center;
-        justify-content: center;
-        padding: 12px;
-        border-radius: 25px;
-        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
-      }
-
-      .triangle {
-        position: absolute;
-        border-style: solid;
-        border-top-color: transparent;
-        border-bottom-color: transparent;
-        border-top-width: 18px;
-        border-bottom-width: 18px;
-        border-left-width: 18px;
-        border-right-width: 0px;
-        right: 90px;
-        bottom: 35px;
-        --tw-border-opacity: 1;
-        border-left-color: rgb(255 255 255 / var(--tw-border-opacity));
-        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
-      }
-    }
+  @media screen and (min-width: 768px) { 
+    width: 30%;
   }
 }

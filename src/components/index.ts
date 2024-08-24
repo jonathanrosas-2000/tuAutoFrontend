@@ -19,3 +19,4 @@ export { default as ProductContainer } from './products/productcontainer/Product
 export { default as Loader } from './general/lodaer/Loader';
 export { default as UnderMantainer } from './maintenance/index';
 export { default as Chatbot } from './chatbot/Chatbot';
+export { default as SimilarCars } from './products/similarCars/SimilarCars';

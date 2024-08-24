@@ -19,6 +19,10 @@
     margin: 0;
 }
 
+body {
+    background-color: rgb(248, 250, 252);
+}
+
 .filterClass {
   width: 95%;
   margin: 0 auto;
@@ -56,6 +60,8 @@
 }
 
 .example {
+    background-color: white;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     border-radius: 15px;
     border: 1px solid #E2E8F0;
     padding: 1rem;

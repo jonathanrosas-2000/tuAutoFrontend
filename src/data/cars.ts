@@ -18,6 +18,16 @@ export const products: carType[] = [
     mortage: 33600,
     type: "compacto",
     transmission: "estandar",
+    highlights: {
+      bodyStyle: "SUV",
+      engine: "6 Cilindros",
+      mpgCityHwy: "20/25",
+      fuel: "gasolina",
+      driveType: "delantera",
+      interiorColor: "gris",
+      exteriorColor: "gris",
+      transmission: "estandar",
+    },
     extra: [
       "Motor 1.6L",
       "Vestiduras negras",
@@ -151,10 +161,14 @@ export const products: carType[] = [
     type: "carga",
     transmission: "estandar",
     extra: [
-      "Motor 1.4L",
-      "Vestiduras negras",
-      "AM/FM BLUETOOTH",
-      "Bolsas de aire frontales",
+      "Motor de 1.4 L EVO 8V SOHC",
+      "Transmisión manual de 5 velocidades",
+      "Tracción delantera (FWD)",
+      "Dirección hidráulica",
+      "Frenos delanteros / traseros con disco ventilado y tambor",
+      "Radio AM / FM y puerto USB",
+      "4 portavazos (puertas y consola central) ",
+      "Cristales eléctricos delanteros"
     ],
     seoDetails: {
       title: "Promaster Rapi: Solución Eficiente para Empresas",

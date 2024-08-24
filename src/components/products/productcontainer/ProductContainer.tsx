@@ -7,11 +7,12 @@ import DescriptonSummary from "../description/DescriptonSummary";
 import ProductByYear from "../productByYear/ProductByYear";
 import ProductByCity from "../productByCity/ProductByCity";
 import Image from "next/image";
-import { SeoMeta } from "@/components";
+import { SeoMeta, SimilarCars } from "@/components";
 import { carType } from "@/types/typing";
+import SummaryHighlights from "../summaryhighlights/SummaryHighlights";
 
 const ProductContainer = ({ product }: { product: carType }) => {
-  const { name, year, description, images, mileage, extra } = product;
+  const { name, year, description, images, mileage, extra, price, highlights } = product;
   const {
     title,
     description: metaDescription,
@@ -48,10 +49,13 @@ const ProductContainer = ({ product }: { product: carType }) => {
             year={year}
             version={"1"}
             milage={String(mileage)}
+            price={price}
             location={"CDMX"}
           />
+          {highlights && <SummaryHighlights highlights={highlights} />}
           {extra.length > 0 && <Features features={extra} />}
           {!!description && <DescriptonSummary description={description} />}
+          <SimilarCars />
           <ProductByYear name={name} />
           <ProductByCity name={name} />
         </div>

@@ -2,7 +2,7 @@
 import { SitemapStream, streamToPromise } from "sitemap";
 import { Readable } from "stream";
 
-export default async (req, res) => {
+const generateSitemap = async (req, res) => {
   const sitemap = [
     { url: "/", changefreq: "monthly", priority: 1.0 },
     { url: "/faq", changefreq: "yearly", priority: 0.8 },
@@ -72,14 +72,20 @@ export default async (req, res) => {
       priority: 0.6,
     },
   ];
+
   const sitemapStream = new SitemapStream({
     hostname: "https://tuautoseminuevo.com",
   });
+
   res.writeHead(200, {
     "Content-Type": "application/xml",
   });
+
   const xmlString = await streamToPromise(
     Readable.from(sitemap).pipe(sitemapStream)
   ).then((data) => data.toString());
+
   res.end(xmlString);
 };
+
+export default generateSitemap;

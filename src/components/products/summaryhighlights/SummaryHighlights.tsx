@@ -25,7 +25,7 @@ const SummaryHighlights = ({ highlights } : { highlights: HighlightsType }) => {
             <div className={styles.grid}>
                 {bodyStyle && <Detail icon={bodyStyleIcon} title='Tipo de Coche' content={bodyStyle}/>}
                 {engine && <Detail icon={engineIcon} title='Motor' content={engine}/>}
-                {mpgCityHwy && <Detail icon={roadIcon} title='Gasto de gasolina' content={mpgCityHwy}/>}
+                {mpgCityHwy && <Detail icon={roadIcon} title='Gasto en Ciudad' content={mpgCityHwy}/>}
                 {fuel && <Detail icon={fuelIcon} title='Combustible' content={fuel}/>}
                 {driveType && <Detail icon={wheelIcon} title='Tracción' content={driveType}/>}
                 {transmission && <Detail icon={speedIcon} title='Trasmisión' content={transmission}/>}

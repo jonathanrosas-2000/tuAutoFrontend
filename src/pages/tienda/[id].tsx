@@ -32,6 +32,10 @@ const ProductPage = () => {
           additionalType: "",
           description: "",
           name: "",
+          color: '',
+          image: [],
+          brand: '',
+          price: 0
         },
       },
     });

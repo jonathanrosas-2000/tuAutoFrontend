@@ -18,6 +18,10 @@ export type ProductSchemaType = {
   additionalType: string;
   description: string;
   name: string;
+  color: string;
+  image: string[];
+  brand: string;
+  price: number;
 };
 
 export type HighlightsType = {

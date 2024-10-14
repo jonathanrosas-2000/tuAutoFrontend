@@ -56,9 +56,17 @@ export const products: carType[] = [
       keywords: ["Volkswagen", "Gol HB 2018"],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "volkswagen-gol-hb-2018",
+        additionalType: "compacto",
+        description:
+          "El Volkswagen Gol HB del año 2018 es un compacto versátil y eficiente, ideal para el uso urbano y viajes cortos. Presentado en un elegante color gris, este vehículo combina un diseño moderno con funcionalidad práctica. Equipado con un motor de 1.6L, el Gol HB ofrece un balance ideal entre potencia y economía de combustible. Cuenta con cuatro puertas que facilitan el acceso a su interior cómodo y bien diseñado, con vestiduras de color negro que aportan un toque de elegancia. En cuanto a tecnología, incluye un sistema de entretenimiento AM/FM con conectividad Bluetooth, permitiendo una experiencia de conducción cómoda y conectada. Además, para la seguridad de los ocupantes, el Gol HB está equipado con bolsas de aire frontales. Con un kilometraje de 52,345 kilómetros, este Volkswagen Gol HB es una opción confiable para quienes buscan un vehículo compacto con buen rendimiento y fiabilidad. Su transmisión estándar garantiza una conducción ágil y eficiente.",
+        name: "Volkswagen Gol HB",
+        color: "gris",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1724037988/principal/GolHB/tbjttgjiusv7lg5x7xiy.jpg",
+        ],
+        brand: "Volkswagen",
+        price: 168000,
       },
     },
   },
@@ -106,9 +114,17 @@ export const products: carType[] = [
       keywords: ["Volkswagen", "Vento Comfortline 2019"],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "volkswagen-vento-comfortline-2019",
+        additionalType: "sedán",
+        description:
+          "El Volkswagen Vento Comfortline Automático del año 2019 es un sedán espacioso y cómodo, perfecto para quienes buscan elegancia y rendimiento en un solo paquete. Con un elegante color plata, este vehículo destaca por su diseño refinado y características avanzadas. Equipado con un motor de 1.6L, el Vento ofrece un rendimiento equilibrado, ideal para viajes largos y conducción en ciudad. Su transmisión automática proporciona una experiencia de manejo suave y sin esfuerzo. El interior, con vestiduras en color negro, ofrece un ambiente sofisticado y cómodo para todos los pasajeros. Además, cuenta con un sistema de entretenimiento AM/FM con conectividad Bluetooth y bolsas de aire frontales para la seguridad. Con un kilometraje de 102,387 kilómetros, este Volkswagen Vento Comfortline es una opción confiable para quienes buscan un sedán elegante y funcional.",
+        name: "Volkswagen Vento Comfortline",
+        color: "Plata",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1724038011/principal/vento/mvsn1s91pt6yy2ihtxsm.jpg",
+        ],
+        brand: "Volkswagen",
+        price: 210000,
       },
     },
   },
@@ -153,9 +169,17 @@ export const products: carType[] = [
       keywords: ["Renault", "Duster Zen 2019"],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "renault-duster-zen-2019",
+        additionalType: "estandar",
+        description:
+          "La Renault Duster Zen 2019 es una SUV robusta y versátil, diseñada para quienes buscan comodidad y capacidad en todo tipo de terrenos. Con un color negro elegante, este vehículo se destaca por su diseño moderno y atractivo. Está equipada con un motor de 2.0L, ofreciendo un rendimiento confiable tanto en ciudad como en carretera. El interior cuenta con vestiduras en color gris, proporcionando un ambiente cómodo para todos los pasajeros. Incluye un sistema de entretenimiento AM/FM con conectividad Bluetooth y bolsas de aire frontales para la seguridad. Con un kilometraje de 64,593 kilómetros, esta Renault Duster Zen es ideal para quienes buscan una SUV confiable y funcional para cualquier aventura. Su transmisión manual permite un control preciso en cualquier situación.",
+        name: "Renault Duster Zen",
+        color: "oxford",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1724038029/principal/Duster/nj6kqaq3dmcx8eur7fqu.jpg",
+        ],
+        brand: "Renault",
+        price: 205000,
       },
     },
   },
@@ -207,11 +231,6 @@ export const products: carType[] = [
         "La Promaster Rapi 2020 es la solución eficiente para empresas. Ofrece gran capacidad de carga y fiabilidad, ideal para el trabajo diario.",
       keywords: ["Promaster", "Rapi 2020"],
       subject: "",
-      productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
-      },
     },
   },
   {
@@ -220,7 +239,8 @@ export const products: carType[] = [
     brand: "Chevrolet",
     year: 2019,
     color: "blanco",
-    description: "El Chevrolet Aveo LS 2019 es un sedán compacto que se destaca por su diseño elegante y eficiente, ideal para la vida urbana y desplazamientos diarios. Con un motor de 1.5L y transmisión manual, ofrece una conducción ágil y económica. Su exterior en color gris metálico le confiere un aspecto moderno y sofisticado. El interior, espacioso y cómodo, cuenta con vestiduras en tonos grises y un tablero intuitivo, diseñado para el confort del conductor y los pasajeros. En cuanto a tecnología, el Aveo LS incluye un sistema de audio con conectividad Bluetooth y controles al volante, asegurando una experiencia de manejo conectada y segura. Con un kilometraje de 40,000 kilómetros, este sedán es una opción excelente para quienes buscan un vehículo fiable y accesible sin sacrificar estilo y funcionalidad.",
+    description:
+      "El Chevrolet Aveo LS 2019 es un sedán compacto que se destaca por su diseño elegante y eficiente, ideal para la vida urbana y desplazamientos diarios. Con un motor de 1.5L y transmisión manual, ofrece una conducción ágil y económica. Su exterior en color gris metálico le confiere un aspecto moderno y sofisticado. El interior, espacioso y cómodo, cuenta con vestiduras en tonos grises y un tablero intuitivo, diseñado para el confort del conductor y los pasajeros. En cuanto a tecnología, el Aveo LS incluye un sistema de audio con conectividad Bluetooth y controles al volante, asegurando una experiencia de manejo conectada y segura. Con un kilometraje de 40,000 kilómetros, este sedán es una opción excelente para quienes buscan un vehículo fiable y accesible sin sacrificar estilo y funcionalidad.",
     doors: 4,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453316/principal/aveo/lo2exnyswnfdsazb91ik.jpg",
@@ -252,13 +272,24 @@ export const products: carType[] = [
     seoDetails: {
       title: "Aveo LS: Confiabilidad y Precio Competitivo",
       description:
-        "Descubre ofertas exclusivas en el Chevrolet Aveo 2019. Compra ahora y disfruta de un auto confiable, eficiente y elegante. ¡Financiamiento disponible!",
+        "El Chevrolet Aveo LS 2019 es un sedán compacto que se destaca por su diseño elegante y eficiente, ideal para la vida urbana y desplazamientos diarios. Con un motor de 1.5L y transmisión manual, ofrece una conducción ágil y económica. Su exterior en color gris metálico le confiere un aspecto moderno y sofisticado. El interior, espacioso y cómodo, cuenta con vestiduras en tonos grises y un tablero intuitivo, diseñado para el confort del conductor y los pasajeros. En cuanto a tecnología, el Aveo LS incluye un sistema de audio con conectividad Bluetooth y controles al volante, asegurando una experiencia de manejo conectada y segura. Con un kilometraje de 40,000 kilómetros, este sedán es una opción excelente para quienes buscan un vehículo fiable y accesible sin sacrificar estilo y funcionalidad.",
       keywords: ["chevrolet aveo", "aveo 2019"],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "chevrolet-aveo-ls-2019",
+        additionalType: "hatchback",
+        description:
+          "El Chevrolet Aveo LS 2019 es un sedán compacto que se destaca por su diseño elegante y eficiente, ideal para la vida urbana y desplazamientos diarios. Con un motor de 1.5L y transmisión manual, ofrece una conducción ágil y económica. Su exterior en color gris metálico le confiere un aspecto moderno y sofisticado. El interior, espacioso y cómodo, cuenta con vestiduras en tonos grises y un tablero intuitivo, diseñado para el confort del conductor y los pasajeros. En cuanto a tecnología, el Aveo LS incluye un sistema de audio con conectividad Bluetooth y controles al volante, asegurando una experiencia de manejo conectada y segura. Con un kilometraje de 40,000 kilómetros, este sedán es una opción excelente para quienes buscan un vehículo fiable y accesible sin sacrificar estilo y funcionalidad.",
+        name: "Aveo LS",
+        color: "blanco",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453316/principal/aveo/lo2exnyswnfdsazb91ik.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453316/principal/aveo/ckcev70f9rvvvoompgex.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453316/principal/aveo/c6t7pzxwuzwuhmswcq8f.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453316/principal/aveo/zzld0y8laafyiawxuxrl.jpg",
+        ],
+        brand: "Chevrolet",
+        price: 197000,
       },
     },
   },
@@ -268,7 +299,8 @@ export const products: carType[] = [
     brand: "Toyota",
     year: 2019,
     color: "oro",
-    description: "El Toyota Avanza 2019 es una minivan compacta y versátil, perfecta para familias que necesitan espacio y comodidad. Equipado con un motor de 1.5L, combina eficiencia y potencia suficiente para el día a día. Su diseño exterior en color blanco perlado y líneas elegantes le otorgan un aspecto moderno. Con capacidad para 7 pasajeros, el interior ofrece flexibilidad con asientos plegables y un diseño práctico, ideal para viajes familiares o actividades comerciales. Incluye un sistema de entretenimiento con radio AM/FM y conectividad USB para mantener a todos los ocupantes entretenidos. Con solo 32,000 kilómetros recorridos, este Toyota Avanza es una opción confiable y duradera para quienes buscan un vehículo amplio y funcional.",
+    description:
+      "El Toyota Avanza 2019 es una minivan compacta y versátil, perfecta para familias que necesitan espacio y comodidad. Equipado con un motor de 1.5L, combina eficiencia y potencia suficiente para el día a día. Su diseño exterior en color blanco perlado y líneas elegantes le otorgan un aspecto moderno. Con capacidad para 7 pasajeros, el interior ofrece flexibilidad con asientos plegables y un diseño práctico, ideal para viajes familiares o actividades comerciales. Incluye un sistema de entretenimiento con radio AM/FM y conectividad USB para mantener a todos los ocupantes entretenidos. Con solo 32,000 kilómetros recorridos, este Toyota Avanza es una opción confiable y duradera para quienes buscan un vehículo amplio y funcional.",
     doors: 5,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453355/principal/avanza/ffsgmbv2spdaqc81vdya.jpg",
@@ -309,9 +341,24 @@ export const products: carType[] = [
       keywords: [],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "toyota-avanza-2019",
+        additionalType: "minivan",
+        description:
+          "El Toyota Avanza 2019 es una minivan compacta y versátil, perfecta para familias que necesitan espacio y comodidad. Equipado con un motor de 1.5L, combina eficiencia y potencia suficiente para el día a día. Su diseño exterior en color blanco perlado y líneas elegantes le otorgan un aspecto moderno. Con capacidad para 7 pasajeros, el interior ofrece flexibilidad con asientos plegables y un diseño práctico, ideal para viajes familiares o actividades comerciales. Incluye un sistema de entretenimiento con radio AM/FM y conectividad USB para mantener a todos los ocupantes entretenidos. Con solo 32,000 kilómetros recorridos, este Toyota Avanza es una opción confiable y duradera para quienes buscan un vehículo amplio y funcional.",
+        name: "Avanza",
+        color: "oro",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453355/principal/avanza/ffsgmbv2spdaqc81vdya.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453355/principal/avanza/crkh7mhew9g5igqjux7g.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453355/principal/avanza/nw8svhphllfqwlbsvimj.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453355/principal/avanza/kudfxfx5il5wjymusecs.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453355/principal/avanza/o9s7rqxauptcoh0acgeb.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453355/principal/avanza/m1n9mep8dsheuy50urml.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453355/principal/avanza/xhgv7tzzdm4en0wljh4s.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453355/principal/avanza/ceuo3rlkh8ooxxsstuyp.jpg",
+        ],
+        brand: "Toyota",
+        price: 230000,
       },
     },
   },
@@ -321,7 +368,8 @@ export const products: carType[] = [
     brand: "Nissan",
     year: 2019,
     color: "plata",
-    description: "El Nissan Versa Exclusive 2019 es un sedán compacto que se destaca por su estilo sofisticado y tecnología avanzada. Equipado con un motor de 1.6L y transmisión CVT, ofrece un manejo suave y eficiente. Su exterior en un elegante color negro brillante le proporciona una apariencia refinada. El interior cuenta con asientos de piel sintética en tonos oscuros, un sistema de infoentretenimiento con pantalla táctil, conectividad Bluetooth y navegación integrada. Además, incluye características de seguridad como cámara de reversa y sensores de estacionamiento. Con un kilometraje de 27,000 kilómetros, el Versa Exclusive es perfecto para quienes buscan un sedán moderno con un toque premium.",
+    description:
+      "El Nissan Versa Exclusive 2019 es un sedán compacto que se destaca por su estilo sofisticado y tecnología avanzada. Equipado con un motor de 1.6L y transmisión CVT, ofrece un manejo suave y eficiente. Su exterior en un elegante color negro brillante le proporciona una apariencia refinada. El interior cuenta con asientos de piel sintética en tonos oscuros, un sistema de infoentretenimiento con pantalla táctil, conectividad Bluetooth y navegación integrada. Además, incluye características de seguridad como cámara de reversa y sensores de estacionamiento. Con un kilometraje de 27,000 kilómetros, el Versa Exclusive es perfecto para quienes buscan un sedán moderno con un toque premium.",
     doors: 4,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453435/principal/versa/fpwtubqday4xa88ymwmd.jpg",
@@ -359,9 +407,21 @@ export const products: carType[] = [
       keywords: [],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "nissan-versa-exclusive-2019",
+        additionalType: "sedan",
+        description:
+          "El Nissan Versa Exclusive 2019 es un sedán compacto que se destaca por su estilo sofisticado y tecnología avanzada. Equipado con un motor de 1.6L y transmisión CVT, ofrece un manejo suave y eficiente. Su exterior en un elegante color negro brillante le proporciona una apariencia refinada. El interior cuenta con asientos de piel sintética en tonos oscuros, un sistema de infoentretenimiento con pantalla táctil, conectividad Bluetooth y navegación integrada. Además, incluye características de seguridad como cámara de reversa y sensores de estacionamiento. Con un kilometraje de 27,000 kilómetros, el Versa Exclusive es perfecto para quienes buscan un sedán moderno con un toque premium.",
+        name: "Versa Exclusive",
+        color: "plata",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453435/principal/versa/fpwtubqday4xa88ymwmd.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453435/principal/versa/p4gat8fzfccb17r2kpmd.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453435/principal/versa/uyadoqgsduk0x9cxoivm.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453435/principal/versa/u97ph9vzbxhnusdgjfvi.jpg",
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714453435/principal/versa/m90ebs6nxc18qzzybznk.jpg",
+        ],
+        brand: "Nissan",
+        price: 238000,
       },
     },
   },
@@ -371,7 +431,8 @@ export const products: carType[] = [
     brand: "Nissan",
     year: 2018,
     color: "blanco",
-    description: "El Nissan March Active 2018 es un hatchback compacto y ágil, ideal para el tráfico urbano y el uso diario. Su motor de 1.6L proporciona una buena relación entre potencia y eficiencia, permitiendo un manejo cómodo en cualquier situación. Su diseño exterior en color rojo vibrante destaca entre la multitud, mientras que su interior práctico y funcional, con vestiduras en tonos grises, ofrece comodidad para hasta cinco ocupantes. El sistema de audio incluye conectividad Bluetooth y entradas auxiliares para disfrutar de la música favorita en todo momento. Con solo 40,500 kilómetros recorridos, el March Active es la opción perfecta para quienes buscan un auto económico y confiable.",
+    description:
+      "El Nissan March Active 2018 es un hatchback compacto y ágil, ideal para el tráfico urbano y el uso diario. Su motor de 1.6L proporciona una buena relación entre potencia y eficiencia, permitiendo un manejo cómodo en cualquier situación. Su diseño exterior en color rojo vibrante destaca entre la multitud, mientras que su interior práctico y funcional, con vestiduras en tonos grises, ofrece comodidad para hasta cinco ocupantes. El sistema de audio incluye conectividad Bluetooth y entradas auxiliares para disfrutar de la música favorita en todo momento. Con solo 40,500 kilómetros recorridos, el March Active es la opción perfecta para quienes buscan un auto económico y confiable.",
     doors: 5,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540461/principal/march/qyol6hnfp6ecramdjtaq.jpg",
@@ -404,9 +465,17 @@ export const products: carType[] = [
       keywords: [],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "nissan-march-active-2018",
+        additionalType: "hatchback",
+        description:
+          "El Nissan March Active 2018 es un hatchback compacto y ágil, ideal para el tráfico urbano y el uso diario. Su motor de 1.6L proporciona una buena relación entre potencia y eficiencia, permitiendo un manejo cómodo en cualquier situación. Su diseño exterior en color rojo vibrante destaca entre la multitud, mientras que su interior práctico y funcional, con vestiduras en tonos grises, ofrece comodidad para hasta cinco ocupantes. El sistema de audio incluye conectividad Bluetooth y entradas auxiliares para disfrutar de la música favorita en todo momento. Con solo 40,500 kilómetros recorridos, el March Active es la opción perfecta para quienes buscan un auto económico y confiable.",
+        name: "March Active",
+        color: "blanco",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540461/principal/march/qyol6hnfp6ecramdjtaq.jpg",
+        ],
+        brand: "Nissan",
+        price: 148000,
       },
     },
   },
@@ -416,7 +485,8 @@ export const products: carType[] = [
     brand: "Chevrolet",
     year: 2017,
     color: "blanco",
-    description: "El Chevrolet Spark NG 2017 es un hatchback compacto diseñado para quienes buscan un vehículo pequeño pero versátil para la ciudad. Con un motor de 1.4L, ofrece un excelente rendimiento de combustible y una conducción ágil en entornos urbanos. Su exterior en color azul brillante añade un toque de dinamismo, mientras que el interior, con asientos en tela negra, ofrece una disposición práctica y moderna. Cuenta con un sistema de entretenimiento con conectividad Bluetooth y controles de audio al volante. Con un kilometraje de 45,000 kilómetros, este Spark NG es una opción perfecta para quienes valoran la economía y el estilo en un paquete compacto.",
+    description:
+      "El Chevrolet Spark NG 2017 es un hatchback compacto diseñado para quienes buscan un vehículo pequeño pero versátil para la ciudad. Con un motor de 1.4L, ofrece un excelente rendimiento de combustible y una conducción ágil en entornos urbanos. Su exterior en color azul brillante añade un toque de dinamismo, mientras que el interior, con asientos en tela negra, ofrece una disposición práctica y moderna. Cuenta con un sistema de entretenimiento con conectividad Bluetooth y controles de audio al volante. Con un kilometraje de 45,000 kilómetros, este Spark NG es una opción perfecta para quienes valoran la economía y el estilo en un paquete compacto.",
     doors: 5,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540531/principal/spark/mjojvurfzldeha0tlrzt.jpg",
@@ -449,9 +519,17 @@ export const products: carType[] = [
       keywords: [],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "chevrolet-spark-ng-2017",
+        additionalType: "micro",
+        description:
+          "El Chevrolet Spark NG 2017 es un hatchback compacto diseñado para quienes buscan un vehículo pequeño pero versátil para la ciudad. Con un motor de 1.4L, ofrece un excelente rendimiento de combustible y una conducción ágil en entornos urbanos. Su exterior en color azul brillante añade un toque de dinamismo, mientras que el interior, con asientos en tela negra, ofrece una disposición práctica y moderna. Cuenta con un sistema de entretenimiento con conectividad Bluetooth y controles de audio al volante. Con un kilometraje de 45,000 kilómetros, este Spark NG es una opción perfecta para quienes valoran la economía y el estilo en un paquete compacto.",
+        name: "Spark NG",
+        color: "blanco",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540531/principal/spark/mjojvurfzldeha0tlrzt.jpg",
+        ],
+        brand: "Chevrolet",
+        price: 155000,
       },
     },
   },
@@ -461,7 +539,8 @@ export const products: carType[] = [
     brand: "Chevrolet",
     year: 2016,
     color: "blanco",
-    description: "El Chevrolet Sonic LT 2016 es un sedán subcompacto que combina estilo juvenil y funcionalidad. Equipado con un motor de 1.6L, ofrece un manejo dinámico y eficiente, ideal para conductores jóvenes o familias pequeñas. Su exterior en color rojo deportivo lo hace destacar, mientras que el interior, con acabados en tonos negros y detalles plateados, proporciona un ambiente moderno y confortable. Incluye un sistema de infoentretenimiento con pantalla táctil y conectividad Bluetooth. Con un kilometraje de 60,000 kilómetros, el Sonic LT es una excelente elección para quienes buscan un vehículo accesible con una buena mezcla de estilo y tecnología.",
+    description:
+      "El Chevrolet Sonic LT 2016 es un sedán subcompacto que combina estilo juvenil y funcionalidad. Equipado con un motor de 1.6L, ofrece un manejo dinámico y eficiente, ideal para conductores jóvenes o familias pequeñas. Su exterior en color rojo deportivo lo hace destacar, mientras que el interior, con acabados en tonos negros y detalles plateados, proporciona un ambiente moderno y confortable. Incluye un sistema de infoentretenimiento con pantalla táctil y conectividad Bluetooth. Con un kilometraje de 60,000 kilómetros, el Sonic LT es una excelente elección para quienes buscan un vehículo accesible con una buena mezcla de estilo y tecnología.",
     doors: 4,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540631/principal/SonicLT/o5iqdt8uf4qzy37jzmbi.jpg",
@@ -495,9 +574,17 @@ export const products: carType[] = [
       keywords: [],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "chevrolet-sonic-lt-2016",
+        additionalType: "sedan",
+        description:
+          "El Chevrolet Sonic LT 2016 es un sedán subcompacto que combina estilo juvenil y funcionalidad. Equipado con un motor de 1.6L, ofrece un manejo dinámico y eficiente, ideal para conductores jóvenes o familias pequeñas. Su exterior en color rojo deportivo lo hace destacar, mientras que el interior, con acabados en tonos negros y detalles plateados, proporciona un ambiente moderno y confortable. Incluye un sistema de infoentretenimiento con pantalla táctil y conectividad Bluetooth. Con un kilometraje de 60,000 kilómetros, el Sonic LT es una excelente elección para quienes buscan un vehículo accesible con una buena mezcla de estilo y tecnología.",
+        name: "Sonic LT",
+        color: "blanco",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540631/principal/SonicLT/o5iqdt8uf4qzy37jzmbi.jpg",
+        ],
+        brand: "Chevrolet",
+        price: 136000,
       },
     },
   },
@@ -507,7 +594,8 @@ export const products: carType[] = [
     brand: "Volkswagen",
     year: 2017,
     color: "blanco",
-    description: "El Volkswagen Gol i-Motion 2017 es un hatchback compacto que se adapta perfectamente a la vida urbana gracias a su tamaño y manejo eficiente. Su motor de 1.6L y la transmisión automatizada i-Motion brindan una conducción suave y cómoda. Su exterior en color blanco resalta su diseño limpio y moderno. El interior, en tonos grises, es funcional y ergonómico, ideal para el uso diario. Incluye un sistema de audio básico con conectividad Bluetooth, permitiendo disfrutar de la música y llamadas con manos libres. Con 50,000 kilómetros recorridos, este Gol i-Motion es ideal para quienes buscan un auto práctico y fácil de manejar.",
+    description:
+      "El Volkswagen Gol i-Motion 2017 es un hatchback compacto que se adapta perfectamente a la vida urbana gracias a su tamaño y manejo eficiente. Su motor de 1.6L y la transmisión automatizada i-Motion brindan una conducción suave y cómoda. Su exterior en color blanco resalta su diseño limpio y moderno. El interior, en tonos grises, es funcional y ergonómico, ideal para el uso diario. Incluye un sistema de audio básico con conectividad Bluetooth, permitiendo disfrutar de la música y llamadas con manos libres. Con 50,000 kilómetros recorridos, este Gol i-Motion es ideal para quienes buscan un auto práctico y fácil de manejar.",
     doors: 4,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540704/principal/GolImotion/guywkejf7ijnybrd1yn8.jpg",
@@ -540,9 +628,17 @@ export const products: carType[] = [
       keywords: [],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "volkswagen-gol-imotion-2017",
+        additionalType: "hatchback",
+        description:
+          "El Volkswagen Gol i-Motion 2017 es un hatchback compacto que se adapta perfectamente a la vida urbana gracias a su tamaño y manejo eficiente. Su motor de 1.6L y la transmisión automatizada i-Motion brindan una conducción suave y cómoda. Su exterior en color blanco resalta su diseño limpio y moderno. El interior, en tonos grises, es funcional y ergonómico, ideal para el uso diario. Incluye un sistema de audio básico con conectividad Bluetooth, permitiendo disfrutar de la música y llamadas con manos libres. Con 50,000 kilómetros recorridos, este Gol i-Motion es ideal para quienes buscan un auto práctico y fácil de manejar.",
+        name: "Gol Imotion",
+        color: "blanco",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540704/principal/GolImotion/guywkejf7ijnybrd1yn8.jpg",
+        ],
+        brand: "Volkswagen",
+        price: 156000,
       },
     },
   },
@@ -552,7 +648,8 @@ export const products: carType[] = [
     brand: "Volkswagen",
     year: 2013,
     color: "blanco",
-    description: "El Volkswagen Gol Sedán 2013 es un sedán compacto y robusto, diseñado para quienes buscan durabilidad y simplicidad. Con un motor de 1.6L, ofrece un rendimiento confiable para el uso diario. Su exterior en color plata metalizado le otorga un toque de sobriedad, mientras que el interior, en tonos grises, es sencillo y cómodo, pensado para un uso práctico. Incluye un sistema de audio básico con conectividad AM/FM. Con 75,000 kilómetros recorridos, este Gol Sedán es una opción sólida para quienes necesitan un vehículo confiable y económico.",
+    description:
+      "El Volkswagen Gol Sedán 2013 es un sedán compacto y robusto, diseñado para quienes buscan durabilidad y simplicidad. Con un motor de 1.6L, ofrece un rendimiento confiable para el uso diario. Su exterior en color plata metalizado le otorga un toque de sobriedad, mientras que el interior, en tonos grises, es sencillo y cómodo, pensado para un uso práctico. Incluye un sistema de audio básico con conectividad AM/FM. Con 75,000 kilómetros recorridos, este Gol Sedán es una opción sólida para quienes necesitan un vehículo confiable y económico.",
     doors: 4,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540777/principal/GolSedan/gcltea4ucwoqa7eo1bxh.jpg",
@@ -585,9 +682,17 @@ export const products: carType[] = [
       keywords: [],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "volkswagen-gol-sedan-2013",
+        additionalType: "sedan",
+        description:
+          "El Volkswagen Gol Sedán 2013 es un sedán compacto y robusto, diseñado para quienes buscan durabilidad y simplicidad. Con un motor de 1.6L, ofrece un rendimiento confiable para el uso diario. Su exterior en color plata metalizado le otorga un toque de sobriedad, mientras que el interior, en tonos grises, es sencillo y cómodo, pensado para un uso práctico. Incluye un sistema de audio básico con conectividad AM/FM. Con 75,000 kilómetros recorridos, este Gol Sedán es una opción sólida para quienes necesitan un vehículo confiable y económico.",
+        name: "Gol Sedan",
+        color: "blanco",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540777/principal/GolSedan/gcltea4ucwoqa7eo1bxh.jpg",
+        ],
+        brand: "Volkswagen",
+        price: 115000,
       },
     },
   },
@@ -597,7 +702,8 @@ export const products: carType[] = [
     brand: "Renault",
     year: 2022,
     color: "plata",
-    description: "El Renault Kwid 2022 es un SUV compacto con un diseño moderno y audaz, ideal para quienes buscan movilidad urbana con estilo. Equipado con un motor 1.0L, es eficiente en combustible y fácil de manejar en la ciudad. Su exterior en color naranja destaca su carácter dinámico, mientras que el interior, en tonos oscuros, ofrece comodidad y tecnología básica, como una pantalla táctil con conectividad Android Auto y Apple CarPlay. Con un kilometraje de solo 10,000 kilómetros, este Kwid es una excelente opción para quienes buscan un vehículo moderno y económico para la ciudad.",
+    description:
+      "El Renault Kwid 2022 es un SUV compacto con un diseño moderno y audaz, ideal para quienes buscan movilidad urbana con estilo. Equipado con un motor 1.0L, es eficiente en combustible y fácil de manejar en la ciudad. Su exterior en color naranja destaca su carácter dinámico, mientras que el interior, en tonos oscuros, ofrece comodidad y tecnología básica, como una pantalla táctil con conectividad Android Auto y Apple CarPlay. Con un kilometraje de solo 10,000 kilómetros, este Kwid es una excelente opción para quienes buscan un vehículo moderno y económico para la ciudad.",
     doors: 5,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540831/principal/Kwid/poedfltyilmmu6b0ysdu.jpg",
@@ -630,9 +736,17 @@ export const products: carType[] = [
       keywords: [],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "renault-kwid-2022",
+        additionalType: "sedan",
+        description:
+          "El Renault Kwid 2022 es un SUV compacto con un diseño moderno y audaz, ideal para quienes buscan movilidad urbana con estilo. Equipado con un motor 1.0L, es eficiente en combustible y fácil de manejar en la ciudad. Su exterior en color naranja destaca su carácter dinámico, mientras que el interior, en tonos oscuros, ofrece comodidad y tecnología básica, como una pantalla táctil con conectividad Android Auto y Apple CarPlay. Con un kilometraje de solo 10,000 kilómetros, este Kwid es una excelente opción para quienes buscan un vehículo moderno y económico para la ciudad.",
+        name: "Kwid",
+        color: "plata",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540831/principal/Kwid/poedfltyilmmu6b0ysdu.jpg",
+        ],
+        brand: "Renault",
+        price: 195000,
       },
     },
   },
@@ -642,7 +756,8 @@ export const products: carType[] = [
     brand: "Ford",
     year: 2017,
     color: "plata",
-    description: "El Ford Figo Impulse 2017 es un hatchback compacto que ofrece un equilibrio ideal entre rendimiento y confort. Con un motor de 1.5L, proporciona una conducción ágil y eficiente. Su diseño exterior en color azul eléctrico le añade un toque juvenil y enérgico. El interior, con asientos en tela negra y detalles en azul, cuenta con un sistema de infoentretenimiento con pantalla táctil y conectividad Bluetooth, además de controles en el volante para una experiencia de manejo cómoda y conectada. Con 55,000 kilómetros recorridos, este Figo Impulse es perfecto para quienes buscan un auto con estilo y tecnología sin comprometer el presupuesto.",
+    description:
+      "El Ford Figo Impulse 2017 es un hatchback compacto que ofrece un equilibrio ideal entre rendimiento y confort. Con un motor de 1.5L, proporciona una conducción ágil y eficiente. Su diseño exterior en color azul eléctrico le añade un toque juvenil y enérgico. El interior, con asientos en tela negra y detalles en azul, cuenta con un sistema de infoentretenimiento con pantalla táctil y conectividad Bluetooth, además de controles en el volante para una experiencia de manejo cómoda y conectada. Con 55,000 kilómetros recorridos, este Figo Impulse es perfecto para quienes buscan un auto con estilo y tecnología sin comprometer el presupuesto.",
     doors: 4,
     images: [
       "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540899/principal/FordImpulse/yk8anvzjujzfsroygwcl.jpg",
@@ -675,9 +790,17 @@ export const products: carType[] = [
       keywords: [],
       subject: "",
       productSchema: {
-        additionalType: "",
-        description: "",
-        name: "",
+        id: "ford-figo-impulse-2017",
+        additionalType: "sedan",
+        description:
+          "El Ford Figo Impulse 2017 es un hatchback compacto que ofrece un equilibrio ideal entre rendimiento y confort. Con un motor de 1.5L, proporciona una conducción ágil y eficiente. Su diseño exterior en color azul eléctrico le añade un toque juvenil y enérgico. El interior, con asientos en tela negra y detalles en azul, cuenta con un sistema de infoentretenimiento con pantalla táctil y conectividad Bluetooth, además de controles en el volante para una experiencia de manejo cómoda y conectada. Con 55,000 kilómetros recorridos, este Figo Impulse es perfecto para quienes buscan un auto con estilo y tecnología sin comprometer el presupuesto.",
+        name: "Figo Impulse",
+        color: "plata",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1714540899/principal/FordImpulse/yk8anvzjujzfsroygwcl.jpg",
+        ],
+        brand: "Ford",
+        price: 158000,
       },
     },
   },

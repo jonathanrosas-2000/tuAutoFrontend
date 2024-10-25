@@ -31,6 +31,8 @@ const SEO = ({
     },
   };
 
+  console.log(productSchema);
+
   return (
     <Head>
       <title>{title} | TuAutoSeminuevo.com 🚗</title>
@@ -45,12 +47,10 @@ const SEO = ({
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
       />
-      {productSchema && Object.keys(productSchema).length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </Head>
   );
 };

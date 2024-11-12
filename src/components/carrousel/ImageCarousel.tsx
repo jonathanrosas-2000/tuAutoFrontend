@@ -26,10 +26,12 @@ const ImageCarousel = ({ images, altText }: { images: string[], altText: string 
           height={1200}
           className={styles.image}
         />
-        <div className={styles.btns}>
-          <button className={styles.prevButton} onClick={prevImage}>&lt;</button>
-          <button className={styles.nextButton} onClick={nextImage}>&gt;</button>
-        </div>
+        {images.length > 1 && (
+          <div className={styles.btns}>
+            <button className={styles.prevButton} onClick={prevImage}>&lt;</button>
+            <button className={styles.nextButton} onClick={nextImage}>&gt;</button>
+          </div>
+        )}
       </div>
     );
   };

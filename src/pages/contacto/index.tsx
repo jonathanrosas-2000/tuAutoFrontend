@@ -36,7 +36,7 @@ const Contacto = () => {
         <Image src={Down} alt="Down Bar" width={200} height={10} />
       </div>
       <div className={styles.container}>
-        <form className={styles.form}>
+        <form className={styles.form} method="POST" data-netlify="true" name="contact-form">
           <h3 className={styles.title}>Mandanos un mensaje</h3>
           <div className={styles.gap}>
             <input

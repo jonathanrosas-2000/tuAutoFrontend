@@ -36,7 +36,7 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
             <div className={styles.separator}></div>
             <span className={styles.text}>CDMX</span>
             <div className={styles.separator}></div>
-            <span className={styles.text}>{mileage}</span>
+            <span className={styles.text}>{mileage} km</span>
           </div>
           <hr className={styles.hr} />
           <p className={styles.price}>Contado: {formatPrice(price)}</p>

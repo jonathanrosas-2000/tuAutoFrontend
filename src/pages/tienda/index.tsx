@@ -11,8 +11,10 @@ import {
 } from "@/components";
 import "@/styles/globals.css";
 import { carType } from "@/types/typing";
-import { products as productsFromDB } from "@/data/cars";
+// import { products as productsFromDB } from "@/data/cars";
 import { useRouter } from "next/router";
+import { ref, get, onValue, off } from "firebase/database"; // Importar métodos de Firebase
+import { database } from "@/lib/firebase";
 
 const Tienda = () => {
   const router = useRouter();
@@ -25,6 +27,24 @@ const Tienda = () => {
   const [filterProducts, setFilterProducts] = useState<any[]>([]);
   const [selectedYears, setSelectedYears] = useState<number[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
+  const [products, setProducts] = useState<carType[]>([]);
+
+  useEffect(() => {
+    const dataRef = ref(database, "products");
+  
+    const unsubscribe = onValue(dataRef, (snapshot) => {
+      const fetchedData = snapshot.val();
+      const resultArray = Object.entries(fetchedData).map(([key, value]) => ({
+        id: key,
+        ...(typeof value === "object" && value !== null ? value : {}),
+      })) as carType[];
+      setProducts(resultArray);
+    });
+  
+    return () => {
+      off(dataRef);
+    };
+  }, []);
 
   useEffect(() => {
     if (
@@ -36,7 +56,7 @@ const Tienda = () => {
   }, [router.query.brand]);
 
   useEffect(() => {
-    let aux = productsFromDB;
+    let aux = products;
     if (!!searchTerm) {
       aux = aux.filter(
         (item: carType) =>
@@ -61,12 +81,12 @@ const Tienda = () => {
     }
 
     setFilterProducts(aux);
-  }, [searchTerm, selectedYears, selectedBrands, selectedMileage]);
+  }, [searchTerm, selectedYears, selectedBrands, selectedMileage, products]);
 
   const yearsSet = new Set();
   const brandSet = new Set();
 
-  const uniqueBrands = productsFromDB
+  const uniqueBrands = products
     .map((product: carType) => {
       if (!brandSet.has(product.brand)) {
         brandSet.add(product.brand);
@@ -76,7 +96,7 @@ const Tienda = () => {
     })
     .filter((brand) => brand !== null);
 
-  const uniqueYears = productsFromDB
+  const uniqueYears = products
     .map((product: carType) => {
       if (!yearsSet.has(product.year)) {
         yearsSet.add(product.year);
@@ -102,7 +122,7 @@ const Tienda = () => {
         <Loader />
       ) : (
         <>
-          {productsFromDB.length > 0 ? (
+          {products.length > 0 ? (
             <>
               <SearchBar
                 searchTerm={searchTerm}

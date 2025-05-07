@@ -632,7 +632,14 @@ export const products: carType[] = [
     description:
       "El Nissan March Sense 2022 es un hatchback compacto que combina estilo y eficiencia. Con su motor de 1.6L, ofrece un rendimiento excepcional en la ciudad y en carretera. Su diseño moderno y cómodo interior lo convierten en una excelente opción para quienes buscan un auto práctico y confiable.",
     doors: 5,
-    images: [],
+    images: [
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647521/productos/FOTOS%20NISSAN%20MARCH%202022/qdbxrdg0pazsg62enxie.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647521/productos/FOTOS%20NISSAN%20MARCH%202022/hywsrdexrmsl8gs2lbf8.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647521/productos/FOTOS%20NISSAN%20MARCH%202022/zulecznibptmalvipsri.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647520/productos/FOTOS%20NISSAN%20MARCH%202022/s0tzhsxq5xlbwghyuzk8.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647518/productos/FOTOS%20NISSAN%20MARCH%202022/byihskpwnhmlau6ppzde.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647517/productos/FOTOS%20NISSAN%20MARCH%202022/tm61ymxzbskulrgn16im.jpg"
+    ],
     mileage: 67300,
     price: 206500,
     mortage: 41300,
@@ -668,4 +675,59 @@ export const products: carType[] = [
       },
     },
   },
+  {
+    id: "volkswagen-gol-hb-tredline-2018",
+    name: "Gol HB Tredline",
+    brand: "Volkswagen",
+    lastAdded: false,
+    year: 2018,
+    color: "Plata",
+    description:
+      "El Volkswagen Gol HB Tredline 2018 es un hatchback compacto que combina estilo y eficiencia. Con su motor de 1.6L, ofrece un rendimiento excepcional en la ciudad y en carretera. Su diseño moderno y cómodo interior lo convierten en una excelente opción para quienes buscan un auto práctico y confiable.",
+    doors: 5,
+    images: [
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647509/productos/VOLKSWAGEN%20GOL%20HB%20TRENDLINE%202018%20GRIS/xedxhcbo6voequayedpf.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647508/productos/VOLKSWAGEN%20GOL%20HB%20TRENDLINE%202018%20GRIS/ysjjgpqsso8urutpwtjw.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647508/productos/VOLKSWAGEN%20GOL%20HB%20TRENDLINE%202018%20GRIS/sxrvvfxzeirepyhzntwo.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647507/productos/VOLKSWAGEN%20GOL%20HB%20TRENDLINE%202018%20GRIS/sxur9wncrh7gyjtctwi8.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647507/productos/VOLKSWAGEN%20GOL%20HB%20TRENDLINE%202018%20GRIS/fwtbxzthkzrajpdil9or.jpg",
+      "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647505/productos/VOLKSWAGEN%20GOL%20HB%20TRENDLINE%202018%20GRIS/csvlkowdvstpl2qv8pnt.jpg"
+    ],
+    mileage: 97800,
+    price: 168000,
+    mortage: 33600,
+    type: "Hatchback",
+    transmission: "estandar",
+    highlights: {
+      bodyStyle: "Hatchback",
+      engine: "1.6L 4 cilindros",
+      mpgCityHwy: "20/28",
+      fuel: "gasolina",
+      driveType: "FWD (Tracción delantera)",
+      interiorColor: "Gris",
+      transmission: "estandar",
+      exteriorColor: "Plata",
+    },
+    extra: [],
+    seoDetails: {
+      title: "Volkswagen Gol HB Tredline 2018 | Estilo y Eficiencia",
+      description:
+        "Descubre el Volkswagen Gol HB Tredline 2018, un hatchback compacto que combina estilo y eficiencia. Ideal para la ciudad y carretera.",
+      keywords: ["volkswagen", "gol", "hatchback", "compacto", "automóvil"],
+      subject: "Volkswagen Gol HB Tredline 2018",
+      productSchema: {
+        id: "volkswagen-gol-hb-tredline-2018",
+        additionalType: "Hatchback",
+        description:
+          "El Volkswagen Gol HB Tredline 2018 es un hatchback compacto que combina estilo y eficiencia, ideal para la ciudad y carretera.",
+        name: "Gol HB Tredline",
+        color: "Plata",
+        image: [
+          "https://res.cloudinary.com/ddbxdrsqz/image/upload/v1746647509/productos/VOLKSWAGEN%20GOL%20HB%20TRENDLINE%202018%20GRIS/xedxhcbo6voequayedpf.jpg",
+        ],
+        brand: "Volkswagen",
+        price: 168000,
+      },
+    },
+  }
 ];

@@ -42,7 +42,7 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
           </div>
           <hr className={styles.hr} />
           <p className={styles.price}>Contado: {formatPrice(price)}</p>
-          <p className={styles.total}><span className={styles.span}>Desde</span> {getPriceWithoutMortage(price)} <span className={styles.span}>/mes*</span></p>
+          <p className={styles.total}><span className={styles.span}>O desde</span> {getPriceWithoutMortage(price)} <span className={styles.span}>/mes*</span></p>
         </div>
     </div>
   )

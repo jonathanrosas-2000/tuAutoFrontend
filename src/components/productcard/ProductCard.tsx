@@ -21,7 +21,9 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
           {images.length > 0 ? (
             <Image src={`${images[0]}`} alt='TuAutoSeminuevo logo' width={200} height={180} className={styles.image}/>
           ) : (
-            <Image src={TuAutoSeminiuevoLogo} alt='TuAutoSeminuevo logo' width={200} height={180} />
+            <div className='flex justify-center items-center w-full h-full'>
+              <Image src={TuAutoSeminiuevoLogo} alt='TuAutoSeminuevo logo' fill={true}  objectPosition={'center'} />
+            </div>
           )}
         </div>
         {lastAdded && (

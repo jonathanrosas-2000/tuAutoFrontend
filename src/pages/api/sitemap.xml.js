@@ -1,5 +1,4 @@
 // pages/api/sitemap.xml.js
-// pages/api/sitemap.xml.js
 import { SitemapStream, streamToPromise } from "sitemap";
 import { Readable } from "stream";
 
@@ -72,6 +71,19 @@ const generateSitemap = async (req, res) => {
       changefreq: "yearly",
       priority: 0.6,
     },
+    { url: "/tienda/chevrolet-cargo-beat-2021", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/chevrolet-aveo-ls-2019", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/chevrolet-spark-ng-2017", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/dodge-promaster-rapid-2020", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/ford-fiesta-se-2018", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/renault-kwid-iconic-2022", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/volkswagen-sedan-imotion-2017", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/volkswagen-gol-sedan-cl-2013", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/chevrolet-aveo-ls-2020", changefreq: "yearly", priority: 0.6 },
+     { url: "/tienda/volkswagen-vento-2019", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/chevrolet-beat-sedan-lt-2020", changefreq: "yearly", priority: 0.6 },
+    { url: "/tienda/nissan-march-sense-2022", changefreq: "yearly", priority: 0.6 },
+
   ];
 
   const sitemapStream = new SitemapStream({

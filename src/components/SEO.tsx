@@ -31,8 +31,6 @@ const SEO = ({
     },
   };
 
-  console.log(productSchema);
-
   return (
     <Head>
       <title>{title} | TuAutoSeminuevo.com 🚗</title>

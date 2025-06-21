@@ -13,9 +13,13 @@
         width: 90%;
         margin: 0 auto;
         padding-top: 1rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
+        
+        .grid {
+            margin: 1rem 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
     }
     .noResults {
         width: 90%;
@@ -26,12 +30,19 @@
         }
     }
 
+    .bannerHeader {
+        width: 70%;
+        background-color: red;
+    }
+
     @media screen and (min-width: 768px) { 
        flex-direction: row;
 
        .results {
             width: 70%;
-            grid-template-columns: 1fr 1fr 1fr;
+            .grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
         }
        .noResults {
             width: 70%;

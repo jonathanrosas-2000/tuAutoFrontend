@@ -5,7 +5,7 @@ export const products: carType[] = [
     id: "chevrolet-cargo-beat-2021",
     name: "Cargo Beat",
     brand: "Chevrolet",
-    lastAdded: true,
+    lastAdded: "Agregado recientemente",
     year: 2021,
     color: "Blanco",
     description:
@@ -67,7 +67,7 @@ export const products: carType[] = [
     id: "chevrolet-aveo-ls-2019",
     name: "Aveo LS",
     brand: "Chevrolet",
-    lastAdded: false,
+    lastAdded: "",
     year: 2019,
     color: "Blanco",
     description:
@@ -119,7 +119,7 @@ export const products: carType[] = [
     id: "chevrolet-spark-ng-2017",
     name: "Spark NG",
     brand: "Chevrolet",
-    lastAdded: false,
+    lastAdded: "",
     year: 2017,
     color: "Blanco",
     description:
@@ -178,7 +178,7 @@ export const products: carType[] = [
     id: "dodge-promaster-rapid-2020",
     name: "Promaster Rapid",
     brand: "Dodge",
-    lastAdded: false,
+    lastAdded: "",
     year: 2020,
     color: "Blanco",
     description:
@@ -243,7 +243,7 @@ export const products: carType[] = [
     id: "ford-fiesta-se-2018",
     name: "Fiesta SE",
     brand: "Ford",
-    lastAdded: true,
+    lastAdded: "Vendido",
     year: 2018,
     color: "Blanco",
     description:
@@ -296,7 +296,7 @@ export const products: carType[] = [
     id: "renault-kwid-iconic-2022",
     name: "Kwid Iconic",
     brand: "Renault",
-    lastAdded: false,
+    lastAdded: "Vendido",
     year: 2022,
     color: "Plata",
     description:
@@ -350,7 +350,7 @@ export const products: carType[] = [
     id: "volkswagen-sedan-imotion-2017",
     name: "Gol Sedan Imotion",
     brand: "Volkswagen",
-    lastAdded: false,
+    lastAdded: "",
     year: 2017,
     color: "Blanco",
     description:
@@ -403,7 +403,7 @@ export const products: carType[] = [
     id: "volkswagen-gol-sedan-cl-2013",
     name: "Gol Sedan CL",
     brand: "Volkswagen",
-    lastAdded: false,
+    lastAdded: "",
     year: 2013,
     color: "Blanco",
     description:
@@ -457,7 +457,7 @@ export const products: carType[] = [
     id: "chevrolet-aveo-ls-2020",
     name: "Aveo LS",
     brand: "Chevrolet",
-    lastAdded: false,
+    lastAdded: "",
     year: 2020,
     color: "Blanco",
     description:
@@ -515,7 +515,7 @@ export const products: carType[] = [
     id: "volkswagen-vento-2019",
     name: "Vento",
     brand: "Volkswagen",
-    lastAdded: false,
+    lastAdded: "",
     year: 2019,
     color: "Plata",
     description:
@@ -571,7 +571,7 @@ export const products: carType[] = [
     id: "chevrolet-beat-sedan-lt-2020",
     name: "Beat Sedan LT",
     brand: "Chevrolet",
-    lastAdded: false,
+    lastAdded: "",
     year: 2020,
     color: "Plata",
     description:
@@ -626,7 +626,7 @@ export const products: carType[] = [
     id: "nissan-march-sense-2022",
     name: "March Sense",
     brand: "Nissan",
-    lastAdded: false,
+    lastAdded: "",
     year: 2022,
     color: "Blanco",
     description:
@@ -679,7 +679,7 @@ export const products: carType[] = [
     id: "volkswagen-gol-hb-tredline-2018",
     name: "Gol HB Tredline",
     brand: "Volkswagen",
-    lastAdded: false,
+    lastAdded: "",
     year: 2018,
     color: "Plata",
     description:

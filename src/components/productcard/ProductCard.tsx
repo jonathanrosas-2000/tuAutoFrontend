@@ -26,9 +26,9 @@ const ProductCard = ( { id, attributes }: ProductsProps ) => {
             </div>
           )}
         </div>
-        {lastAdded && (
-        <div className={styles.newProduct}>
-          Agregado recientemente
+        {lastAdded && lastAdded?.length > 0 && (
+        <div className={lastAdded === "Vendido" ? styles.newProductTagBlue : styles.newProductTag}>
+          {lastAdded}
         </div>
       )}
         <div className={styles.data}>

@@ -52,7 +52,7 @@ export interface carType {
   transmission: "estandar" | "automatica";
   extra: string[];
   highlights?: HighlightsType;
-  lastAdded?: boolean;
+  lastAdded?: string;
   seoDetails: SeoDetailsType;
 }
 

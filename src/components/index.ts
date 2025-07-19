@@ -21,3 +21,9 @@ export { default as UnderMantainer } from './maintenance/index';
 export { default as Chatbot } from './chatbot/Chatbot';
 export { default as SimilarCars } from './products/similarCars/SimilarCars';
 export { default as GeneralBanner } from './general/BannerStatus/Banner';
+export { default as BenefitsSection } from './general/Benefits/Benefits';
+
+//Formularios
+export { default as FormCar } from "./forms/vender/vehiculo/index";
+export { default as FormContacto } from "./forms/vender/contacto/index";
+export { default as FormExtra } from "./forms/vender/extras/index";

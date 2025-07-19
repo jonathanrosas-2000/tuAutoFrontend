@@ -28,9 +28,6 @@ const Header = () => {
         <Link href={'/'}><Image src={principalIcon} alt='Tu auto seminuevo logo' className={styles.icon}/></Link>
         <ul className={styles.menu}>
             <li className={styles.items}>
-              <Link href='/'className={styles.link}>Home</Link>
-            </li>
-            <li className={styles.items}>
               <Link href='/tienda'className={styles.link}>Tienda</Link>
             </li>
             <li className={styles.items}>
@@ -42,6 +39,9 @@ const Header = () => {
             <li className={styles.items}>
               <Link href='/contacto'className={styles.link}>Contacto</Link>
             </li>
+            <li className={styles.items}>
+              <Link href="/vende-tu-auto" className={styles.special_link}>Vender mi Auto</Link>
+            </li>
           </ul>
       </div>
       {collapsedMenu && (
@@ -51,12 +51,6 @@ const Header = () => {
             <Image src={closeIcon} alt='Close menu items' width={30} height={30} onClick={handleActivateMenuMobile} />
           </div>
           <ul className={styles.menu}>
-            <li className={styles.items}>
-              <Link href='/'className={styles.link}>
-                <Image src={homeIcon} alt='Hamburger menu' width={25} height={25} />
-                <span>Home</span>
-              </Link>
-            </li>
             <li className={styles.items}>
               <Link href='/tienda'className={styles.link}>
                 <Image src={cartIcon} alt='Hamburger menu' width={25} height={25} />
@@ -79,6 +73,12 @@ const Header = () => {
               <Link href='/contacto'className={styles.link}>
                 <Image src={contactIcon} alt='Hamburger menu' width={25} height={25} />
                 <span>Contacto</span>
+              </Link>
+            </li>
+            <li className={styles.items}>
+              <Link href='/vende-tu-auto'className={styles.link}>
+                <Image src={contactIcon} alt='Hamburger menu' width={25} height={25} />
+                <span>Vender mi Auto</span>
               </Link>
             </li>
           </ul>

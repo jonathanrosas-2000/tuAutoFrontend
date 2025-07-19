@@ -1,0 +1,37 @@
+.mainContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumbContainer {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--purple-color);
+}
+
+.title {
+    margin-top: 3rem;
+    font-size: 3.2rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: #232938;
+    text-align: center;
+
+    .colored {
+        color: var(--blue-button);
+    }
+
+    @media (max-width: 768px) {
+        font-size: 2.5rem;
+        line-height: 3.2rem;
+    }
+}
+
+.paragraph {
+    padding-top: 1rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-size: 20px;
+    color: #5b627d;
+}

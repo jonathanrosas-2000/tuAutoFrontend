@@ -1,0 +1,94 @@
+.container {
+    margin: 2rem 0;
+    width: 100%;
+    height: fit-content;
+    border-radius: 25px;
+    overflow: hidden;
+
+    -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.65);
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.65);
+}
+
+.topHeader {
+    background: linear-gradient(to right, rgb(35, 44, 119), rgb(0, 132, 135));
+    padding: 2rem;
+    color: white;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+    .label {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0.5rem 0;
+    }
+
+    .inputField {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid gray;
+        border-radius: 15px;
+        color: gray;
+    }
+
+    .selectField {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: 15px;
+        color: gray;
+        border: 1px solid gray;
+    }
+
+    .inputField:focus {
+        outline: none;
+    }
+}
+
+.form {
+    padding: 2rem;
+}
+
+.oneColumn {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.twoColumns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.threeColumns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .twoColumns {
+        gap: 0.5rem;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0.5rem 0;
+    }
+
+    .threeColumns {
+        gap: 0.5rem;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0.5rem 0;
+    }
+}

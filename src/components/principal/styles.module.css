@@ -3,7 +3,8 @@
     background-color: var(--dark-purple);
 
     .container {
-        padding: 2rem;;
+        padding: 2rem;
+        ;
         width: 90%;
         max-width: 1300px;
         display: flex;
@@ -31,6 +32,7 @@
                 }
             }
         }
+
         .social {
             display: flex;
             flex-direction: row;
@@ -39,9 +41,8 @@
             gap: 2rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
-            .icon {
 
-            }
+            .icon {}
         }
     }
 
@@ -50,17 +51,18 @@
         .container {
             flex-direction: row;
             justify-content: space-between;
+
             .icon {
                 width: 30%;
-           }
+            }
 
-           .menu {
-            display: flex;
-            flex-direction: row;
-            gap: 2rem;
+            .menu {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+            }
         }
-        }
-       
+
     }
 }
 
@@ -132,6 +134,7 @@
             }
         }
     }
+
     .legal {
         width: 90%;
         margin: 0 auto;
@@ -158,6 +161,7 @@
         max-width: 350px;
         height: auto;
     }
+
     .menu {
         list-style: none;
         text-decoration: none;
@@ -174,9 +178,19 @@
                 font-weight: 400;
                 transition: transform 0.3s ease;
             }
+
             .link:hover {
                 color: var(--purple-color);
                 transform: translateY(-5px);
+            }
+
+            .special_link {
+                text-decoration: none;
+                color: white;
+                font-weight: 500;
+                padding: 0.5rem 1rem;
+                background-color: var(--purple-color);
+                border-radius: 1rem;
             }
         }
     }
@@ -209,6 +223,14 @@
 
     .link {
         text-decoration: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .last_link {
+        text-decoration: underline;
         color: white;
         cursor: pointer;
         font-size: 16px;

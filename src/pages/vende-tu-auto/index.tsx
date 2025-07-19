@@ -27,7 +27,7 @@ function Index() {
                     <p className={styles.paragraph}>Obtén la mejor cotización para tu vehículo de forma rápida y segura.</p>
                 </div>
                 <div className={styles.mainContainer}>
-                    <form name="formulario-contacto" method="POST" data-netlify="true">
+                    <form name="formulario-contacto" method="POST" action="/api/submit">
                         <input type="hidden" name="form-name" value="formulario-contacto" />
                         <FormCar />
                         <FormContacto />

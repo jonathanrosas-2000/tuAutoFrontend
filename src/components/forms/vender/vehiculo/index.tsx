@@ -40,8 +40,8 @@ function Index() {
                             <label className={styles.label}>Marca*</label>
                             <select className={styles.selectField} name="marca" value={formData.car.marca} onChange={handleChange}>
                                 <option value={"#"}>Selecciona una marca</option>
-                                {CarBrandsTypes.map((carBrand: SelectField) => (
-                                    <option value={carBrand.value}>{carBrand.label}</option>
+                                {CarBrandsTypes.map((carBrand: SelectField, index: number) => (
+                                    <option key={`${carBrand.value}-${index}`} value={carBrand.value}>{carBrand.label}</option>
                                 ))}
                             </select>
                         </div>
@@ -69,8 +69,8 @@ function Index() {
                             <label className={styles.label}>Combustible*</label>
                             <select className={styles.selectField} value={formData.car.combustible} onChange={handleChange} name="combustible">
                                 <option value={"#"}>Selecciona un tipo de combustible</option>
-                                {FuelTypes.map((fuelType: SelectField) => (
-                                    <option value={fuelType.value}>{fuelType.label}</option>
+                                {FuelTypes.map((fuelType: SelectField, index: number) => (
+                                    <option key={`${fuelType.value}-${index}`} value={fuelType.value}>{fuelType.label}</option>
                                 ))}
                             </select>
                         </div>
@@ -78,8 +78,8 @@ function Index() {
                             <label className={styles.label}>Transmisión*</label>
                             <select className={styles.selectField} value={formData.car.transmision} onChange={handleChange} name="transmision">
                                 <option value={"#"}>Selecciona un tipo de transmisión</option>
-                                {TransmissionTypes.map((transmissionType: SelectField) => (
-                                    <option value={transmissionType.value}>{transmissionType.label}</option>
+                                {TransmissionTypes.map((transmissionType: SelectField, index: number) => (
+                                    <option key={`${transmissionType.value}-${index}`} value={transmissionType.value}>{transmissionType.label}</option>
                                 ))}
                             </select>
                         </div>
@@ -93,8 +93,8 @@ function Index() {
                             <label className={styles.label}>Estado General del Vehiculo*</label>
                             <select className={styles.selectField} value={formData.car.estado} onChange={handleChange} name="estado">
                                 <option value={"#"}>Selecciona el estado</option>
-                                {VehicleConditionsTypes.map((vehicleConditionsType: SelectField) => (
-                                    <option value={vehicleConditionsType.value}>{vehicleConditionsType.label}</option>
+                                {VehicleConditionsTypes.map((vehicleConditionsType: SelectField, index: number) => (
+                                    <option key={`${vehicleConditionsType.value}-${index}`} value={vehicleConditionsType.value}>{vehicleConditionsType.label}</option>
                                 ))}
                             </select>
                         </div>

@@ -29,7 +29,7 @@ function Index(props: Props) {
             <div className={styles.container}>
                 <div className={styles.topHeader}>
                     <h2 className={styles.header}><Image src={filterIcon} alt='Automoviles' width={25} height={25} /> Información de tu vehiculo</h2>
-                    <p>Cuéntanos sobre el auto que quieres vender</p>
+                    <p className={styles.paragraph}>Cuéntanos sobre el auto que quieres vender</p>
                 </div>
                 <div className={styles.form}>
                     <div className={styles.twoColumns}>

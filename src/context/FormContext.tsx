@@ -1,32 +1,7 @@
 "use client";
+import { FormData } from "@/types/formularios";
 import React, { createContext, useState } from "react";
 
-interface FormData {
-    car: {
-        marca: string;
-        modelo: string;
-        year: string;
-        kilometraje: string;
-        precio: string;
-        combustible: string;
-        transmision: string;
-        color: string;
-        estado: string;
-    };
-    user: {
-        nombre: string;
-        apellidos: string;
-        telefono: string;
-        email: string;
-        address: string;
-    };
-    extras: {
-        motivoDeVenta: string;
-        comentarios: string;
-        aceptaTerminos: boolean;
-        papeleo: string[];
-    };
-}
 
 const defaultFormData: FormData = {
     car: {
@@ -58,16 +33,28 @@ const defaultFormData: FormData = {
 export const FormContext = createContext<{
   formData: FormData;
   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+  setTermsAndConditions: (value: boolean) => void;
 }>({
   formData: defaultFormData,
   setFormData: () => {},
+  setTermsAndConditions: () => {},
 });
 
 export const FormProvider: React.FC<{ children: React.ReactNode}> = ({ children }) => {
     const [formData, setFormData] = useState(defaultFormData);
 
+    const setTermsAndConditions = (value: boolean) => {
+    setFormData((prev) => ({
+      ...prev,
+      extras: {
+        ...prev.extras,
+        aceptaTerminos: value,
+      },
+    }));
+  };
+
     return (
-        <FormContext.Provider value={{ formData, setFormData}}>
+        <FormContext.Provider value={{ formData, setFormData, setTermsAndConditions}}>
             {children}
         </FormContext.Provider>
     )

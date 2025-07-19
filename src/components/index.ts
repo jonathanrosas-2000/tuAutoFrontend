@@ -27,3 +27,4 @@ export { default as BenefitsSection } from './general/Benefits/Benefits';
 export { default as FormCar } from "./forms/vender/vehiculo/index";
 export { default as FormContacto } from "./forms/vender/contacto/index";
 export { default as FormExtra } from "./forms/vender/extras/index";
+export { default as FormContactoUsuario } from "./forms/vender/form/index";

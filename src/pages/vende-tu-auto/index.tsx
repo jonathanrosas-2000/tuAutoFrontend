@@ -1,9 +1,10 @@
 "use client";
-import { BenefitsSection, BreadCrumb, FormCar, FormContacto, FormExtra } from "@/components";
+import { BenefitsSection, BreadCrumb, FormContactoUsuario } from "@/components";
 import PrincipalLayout from "@/layout/PrincipalLayout";
 import styles from "./styles.module.css";
 import "@/styles/globals.css";
-import { FormProvider } from "@/context/FormContext";
+import { FormContext, FormProvider } from "@/context/FormContext";
+import { useContext } from "react";
 
 const benefitsArray = [
     {
@@ -16,6 +17,10 @@ const benefitsArray = [
 ]
 
 function Index() {
+    const { formData, setFormData } = useContext(FormContext);
+
+    console.log(formData);
+
     return (
         <FormProvider>
             <PrincipalLayout>
@@ -27,14 +32,7 @@ function Index() {
                     <p className={styles.paragraph}>Obtén la mejor cotización para tu vehículo de forma rápida y segura.</p>
                 </div>
                 <div className={styles.mainContainer}>
-                    <form name="formulario-contacto" method="POST" action="/api/submit">
-                        <input type="hidden" name="form-name" value="formulario-contacto" />
-                        <FormCar />
-                        <FormContacto />
-                        <FormExtra />
-
-                        <button type="submit">Enviar</button>
-                    </form>
+                    <FormContactoUsuario />
                 </div>
                 <BenefitsSection title="¿Cómo funciona nuestro proceso?" benefits={benefitsArray} />
             </PrincipalLayout>

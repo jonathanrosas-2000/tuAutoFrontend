@@ -25,7 +25,7 @@ function Index() {
             <div className={styles.container}>
                 <div className={styles.topHeader}>
                     <h2 className={styles.header}><Image src={UserIcon} alt='Automoviles' width={25} height={25} /> Tus Datos de Contacto</h2>
-                    <p>Agrega tu información personal para poder contactarte y coordinar la evaluación.</p>
+                    <p className={styles.paragraph}>Agrega tu información personal para poder contactarte y coordinar la evaluación.</p>
                 </div>
                 <div className={styles.form}>
                     <div className={styles.twoColumns}>

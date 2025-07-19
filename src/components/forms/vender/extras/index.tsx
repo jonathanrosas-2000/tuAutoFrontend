@@ -56,7 +56,7 @@ function Index() {
             <div className={styles.container}>
                 <div className={styles.topHeader}>
                     <h2 className={styles.header}><Image src={TableIcon} alt='Contacto' width={25} height={25} />Información Adicional</h2>
-                    <p>Ayúdanos a conocer mejor tu situación.</p>
+                    <p className={styles.paragraph}>Ayúdanos a conocer mejor tu situación.</p>
                 </div>
                 <div className={styles.form}>
                     <div className={styles.oneColumn}>

@@ -19,8 +19,6 @@ const benefitsArray = [
 function Index() {
     const { formData, setFormData } = useContext(FormContext);
 
-    console.log(formData);
-
     return (
         <FormProvider>
             <PrincipalLayout>

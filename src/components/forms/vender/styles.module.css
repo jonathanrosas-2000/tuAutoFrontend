@@ -49,22 +49,36 @@
     }
 
     .inputField {
+        -webkit-appearance: none;
+        appearance: none;
         width: 100%;
-        padding: 0.5rem 1rem;
-        border: 1px solid gray;
-        border-radius: 15px;
-        color: gray;
+        min-height: 40px;
+        border-radius: 5px;
+        background-color: #E2E8F0;
+        color: #64748B;
+        border: none;
+        padding: 5px;
     }
 
     .selectField {
+        -webkit-appearance: none;
+        appearance: none;
         width: 100%;
-        padding: 0.5rem 1rem;
-        border-radius: 15px;
-        color: gray;
-        border: 1px solid gray;
+        min-height: 40px;
+        border-radius: 5px;
+        background-color: #E2E8F0;
+        color: #64748B;
+        border: none;
+        padding: 5px;
+    }
+
+    .selectField:focus {
+        border: 2px solid #0096FF;
+        outline: none;
     }
 
     .inputField:focus {
+        border: 2px solid #0096FF;
         outline: none;
     }
 }
@@ -137,7 +151,7 @@
     width: 70%;
     margin: 0 auto;
     padding: 1rem 0;
-    
+
     @media (max-width: 768px) {
         width: 90%;
         padding: 0.5rem 0;

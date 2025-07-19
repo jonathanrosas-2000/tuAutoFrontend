@@ -1,5 +1,6 @@
 "use client";
 import React, { useContext, useState, useEffect } from 'react'
+import Link from 'next/link';
 import { FormCar, FormContacto, FormExtra } from '@/components'
 import { FormContext } from '@/context/FormContext';
 import styles from "../styles.module.css";
@@ -7,7 +8,7 @@ import styles from "../styles.module.css";
 function Index() {
     const [confirmation, setConfirmation] = useState(false);
 
-    const { formData, setTermsAndConditions } = useContext(FormContext);
+    const { formData, setTermsAndConditions, setClearForm } = useContext(FormContext);
 
     useEffect(() => {
         if (confirmation) {
@@ -22,7 +23,7 @@ function Index() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        const res = await fetch('/api/contacto', {
+        const res = await fetch('/api/vender-mi-coche', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData),
@@ -30,6 +31,7 @@ function Index() {
 
         if (res.ok) {
             setConfirmation(true);
+            setClearForm();
         }
     };
 
@@ -60,7 +62,7 @@ function Index() {
                     onChange={() => setTermsAndConditions(!formData.extras.aceptaTerminos)}
                     style={{ marginRight: "5px" }}
                 />
-                Acepto los <span className={styles.specialText}>términos y condiciones</span> y autorizo el tratamiento de mis datos personales conforme a la <span className={styles.specialText}>politica de privacidad</span>. Entiendo que tuAutoSeminuevo evaluará mi vehículo y me contactará con una oferta
+                Acepto los <Link href={"/legales/terminos-y-condiciones"} className={styles.specialText}>términos y condiciones</Link> y autorizo el tratamiento de mis datos personales conforme a la <Link href="/legales/politica-privacidad" className={styles.specialText}>politica de privacidad</Link>. Entiendo que tuAutoSeminuevo evaluará mi vehículo y me contactará con una oferta
             </div>
 
             <div className={styles.mainContainer}>

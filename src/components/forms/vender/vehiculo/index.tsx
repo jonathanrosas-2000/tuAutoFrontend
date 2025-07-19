@@ -6,11 +6,14 @@ import Image from 'next/image';
 import filterIcon from '@/assets/icons/forms/car.svg';
 import { FormContext } from '@/context/FormContext';
 
-interface Props { }
+import { CarBrandsTypes, FuelTypes, TransmissionTypes, VehicleConditionsTypes } from "@/data/formData";
 
-function Index(props: Props) {
-    const { } = props
+interface SelectField {
+    label: string;
+    value: string;
+}
 
+function Index() {
     const { formData, setFormData } = useContext(FormContext);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -37,8 +40,9 @@ function Index(props: Props) {
                             <label className={styles.label}>Marca*</label>
                             <select className={styles.selectField} name="marca" value={formData.car.marca} onChange={handleChange}>
                                 <option value={"#"}>Selecciona una marca</option>
-                                <option value={"nissan"}>Nissan</option>
-                                <option value={"chevrolet"}>Chevrolet</option>
+                                {CarBrandsTypes.map((carBrand: SelectField) => (
+                                    <option value={carBrand.value}>{carBrand.label}</option>
+                                ))}
                             </select>
                         </div>
                         <div className={styles.field}>
@@ -65,16 +69,18 @@ function Index(props: Props) {
                             <label className={styles.label}>Combustible*</label>
                             <select className={styles.selectField} value={formData.car.combustible} onChange={handleChange} name="combustible">
                                 <option value={"#"}>Selecciona un tipo de combustible</option>
-                                <option value="Gas">Gas</option>
-                                <option value="Gas">Electrico</option>
+                                {FuelTypes.map((fuelType: SelectField) => (
+                                    <option value={fuelType.value}>{fuelType.label}</option>
+                                ))}
                             </select>
                         </div>
                         <div className={styles.field}>
                             <label className={styles.label}>Transmisión*</label>
                             <select className={styles.selectField} value={formData.car.transmision} onChange={handleChange} name="transmision">
                                 <option value={"#"}>Selecciona un tipo de transmisión</option>
-                                <option value="Manual">Manual</option>
-                                <option value="Estandar">Estandar</option>
+                                {TransmissionTypes.map((transmissionType: SelectField) => (
+                                    <option value={transmissionType.value}>{transmissionType.label}</option>
+                                ))}
                             </select>
                         </div>
                         <div className={styles.field}>
@@ -87,8 +93,9 @@ function Index(props: Props) {
                             <label className={styles.label}>Estado General del Vehiculo*</label>
                             <select className={styles.selectField} value={formData.car.estado} onChange={handleChange} name="estado">
                                 <option value={"#"}>Selecciona el estado</option>
-                                <option value="correct">Correcto</option>
-                                <option value="mal">Mal</option>
+                                {VehicleConditionsTypes.map((vehicleConditionsType: SelectField) => (
+                                    <option value={vehicleConditionsType.value}>{vehicleConditionsType.label}</option>
+                                ))}
                             </select>
                         </div>
                     </div>

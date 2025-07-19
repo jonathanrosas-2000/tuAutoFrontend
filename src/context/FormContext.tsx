@@ -66,8 +66,6 @@ export const FormContext = createContext<{
 export const FormProvider: React.FC<{ children: React.ReactNode}> = ({ children }) => {
     const [formData, setFormData] = useState(defaultFormData);
 
-    console.log(formData);
-
     return (
         <FormContext.Provider value={{ formData, setFormData}}>
             {children}

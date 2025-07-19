@@ -1,11 +1,9 @@
 "use client";
-import { BenefitsSection, BreadCrumb, FormCar, FormContacto } from "@/components";
+import { BenefitsSection, BreadCrumb, FormCar, FormContacto, FormExtra } from "@/components";
 import PrincipalLayout from "@/layout/PrincipalLayout";
 import styles from "./styles.module.css";
 import "@/styles/globals.css";
 import { FormProvider } from "@/context/FormContext";
-
-interface Props { }
 
 const benefitsArray = [
     {
@@ -17,9 +15,7 @@ const benefitsArray = [
     { title: "Recibe una oferta", description: "Recibe una oferta por nuestra parte" }
 ]
 
-function Index(props: Props) {
-    const { } = props
-
+function Index() {
     return (
         <FormProvider>
             <PrincipalLayout>
@@ -31,8 +27,14 @@ function Index(props: Props) {
                     <p className={styles.paragraph}>Obtén la mejor cotización para tu vehículo de forma rápida y segura.</p>
                 </div>
                 <div className={styles.mainContainer}>
-                    <FormCar />
-                    <FormContacto />
+                    <form name="formulario-contacto" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="formulario-contacto" />
+                        <FormCar />
+                        <FormContacto />
+                        <FormExtra />
+
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
                 <BenefitsSection title="¿Cómo funciona nuestro proceso?" benefits={benefitsArray} />
             </PrincipalLayout>

@@ -1,6 +1,15 @@
+.mainContainer {
+    width: 80%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
 .container {
-    margin: 2rem 0;
     width: 100%;
+    margin: 2rem 0;
     height: fit-content;
     border-radius: 25px;
     overflow: hidden;
@@ -28,14 +37,14 @@
     flex-direction: column;
 
     .label {
-        font-size: 20px;
+        font-size: 1rem;
         font-weight: 500;
         margin: 0.5rem 0;
     }
 
     .inputField {
         width: 100%;
-        padding: 0.75rem 1rem;
+        padding: 0.5rem 1rem;
         border: 1px solid gray;
         border-radius: 15px;
         color: gray;
@@ -43,7 +52,7 @@
 
     .selectField {
         width: 100%;
-        padding: 0.75rem 1rem;
+        padding: 0.5rem 1rem;
         border-radius: 15px;
         color: gray;
         border: 1px solid gray;
@@ -62,33 +71,28 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
-    margin: 1rem 0;
 }
 
 .twoColumns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin: 1rem 0;
 }
 
 .threeColumns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin: 1rem 0;
 }
 
 @media (max-width: 768px) {
     .twoColumns {
         gap: 0.5rem;
         grid-template-columns: repeat(1, 1fr);
-        margin: 0.5rem 0;
     }
 
     .threeColumns {
         gap: 0.5rem;
         grid-template-columns: repeat(1, 1fr);
-        margin: 0.5rem 0;
     }
 }

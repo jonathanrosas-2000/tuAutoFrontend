@@ -1,7 +1,11 @@
 .mainContainer {
-    width: 100%;
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+        width: 95%;    
+    }
 }
 
 .breadcrumbContainer {

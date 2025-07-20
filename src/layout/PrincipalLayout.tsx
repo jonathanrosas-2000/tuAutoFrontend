@@ -1,5 +1,6 @@
 import { Header, Footer, Chatbot } from '@/components'
 
+
 const PrincipalLayout = ({ children }: {children: React.ReactNode}) => {
   return (
     <div>

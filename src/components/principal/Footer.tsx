@@ -13,9 +13,6 @@ const Footer = () => {
        <Image src={Logo} alt='Tu auto seminuevo logo' className={styles.icon}/>
         <ul className={styles.menu}>
             <li className={styles.items}>
-              <Link href='/'className={styles.link}>Home</Link>
-            </li>
-            <li className={styles.items}>
               <Link href='/tienda'className={styles.link}>Tienda</Link>
             </li>
             <li className={styles.items}>
@@ -26,6 +23,9 @@ const Footer = () => {
             </li>
             <li className={styles.items}>
               <Link href='/contacto'className={styles.link}>Contacto</Link>
+            </li>
+            <li className={styles.items}>
+              <Link href='/vende-tu-autp'className={styles.link}>Vender Mi Auto</Link>
             </li>
           </ul>
       <div className={styles.social}>

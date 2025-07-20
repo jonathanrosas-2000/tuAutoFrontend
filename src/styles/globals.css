@@ -10,6 +10,7 @@
   --balck-color: black;
   --text-gray: #64748b;
   --gray: #e2e8f0;
+  --orange: #bb7733;
 }
 
 * {
@@ -167,4 +168,15 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5rem;
+}
+
+.politica-privacidad {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.terminos-condiciones {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
 }

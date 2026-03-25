@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-
-        {/* GTM Script */}
-        <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
+      <head>
+        {/* GTM Script directo en el head */}
+        <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -31,7 +27,8 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-WD5WT7ZZ');`,
           }}
         />
-
+      </head>
+      <body className={inter.className}>
         {/* GTM Noscript */}
         <noscript>
           <iframe
@@ -41,9 +38,7 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-
         {children}
-
       </body>
     </html>
   );

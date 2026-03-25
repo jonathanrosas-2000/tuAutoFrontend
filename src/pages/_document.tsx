@@ -14,6 +14,19 @@ export default function Document() {
             })(window,document,'script','dataLayer','GTM-WD5WT7ZZ');`,
           }}
         />
+        
+         {/* GA4 Script */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D345X9E2NE" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-D345X9E2NE');
+            `,
+          }}
+        />
       </Head>
       <body>
         {/* GTM Noscript */}
